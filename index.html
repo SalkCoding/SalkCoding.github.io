@@ -1,7 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <!-- Page css -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/largeMedia.css">
+    <link rel="stylesheet" href="css/graph.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!-- Meta and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class="portrait"></div>
+<div class="profile">
+    <div class="profile_header">
+        <div class="name">
+            I'm a
+            <div class="name_job">
+                <ul class="name_job_list">
+                    <li>Developer</li>
+                    <li>Student</li>
+                    <li>Gamer</li>
+                    <li>Developer</li>
+                </ul>
+            </div>
+            <h1 class="name_title">Sangbeom Jo!</h1>
+        </div>
+        <p>
+            I am a Korean who likes to create what I want through the act of development.
+            Also, love development and gaming, and these days I enjoy running outside as a new hobby.
+        </p>
+        <p>
+            In the past, I mainly used Java and C#, but recently, when I create GUI programs,
+            I use C# Winform and use Kotlin for the rest (e.g., Back-end, Minecraft plugin). Additionally, I use C++ to solve algorithmic problems.
+        </p>
+    </div>
+    <div class="profile_section">
+        <h2>Education</h2>
+        <ul class="education">
+            <li>
+                <h3>Gachon unviersity (2020 ~ Present)</h3>
+                <p style="padding-bottom: 30px">
+                    I am currently in my second year of university, and my major is the Software.
+                    The overall GPA is 4.12 and the major course GPA is 4.16 without retake.
+                </p>
+            </li>
+            <li>
+                <h3>Gosaek highschool (2017 ~ 2020)</h3>
+            </li>
+        </ul>
+    </div>
+    <div class="profile_section">
+        <h2>What I made?</h2>
+        <ul class="timeline">
+            <li>
+                <h3><a href="https://cafe.naver.com/serverguide">EvaTuna project<br>2022.01 ~ Present</a></h3>
+                <iframe width="280" height="158" src="https://www.youtube.com/embed/2jCrlCtKQDs" frameborder="0"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                <p>
+                    This is a Minecraft server currently under development.
+                    Currently, I am developing and maintaining ground protection, custom essentials, and random
+                    teleports.
+                </p>
+            </li>
+            <li>
+                <h3><a href="https://cafe.naver.com/serverguide">EvaTuna project<br>2019.02.06 ~ 2022.01</a></h3>
+                <iframe width="280" height="158" src="https://www.youtube.com/embed/sxuOr-8tavE" frameborder="0"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                <p>
+                    I was in charge of development and maintenance of
+                    random teleport system, skill system, custom essential plugin, daily quest,
+                    and other raid-related plugins with Minecraft server for about a year.
+                </p>
+            </li>
+            <li>
+                <h3><a href="https://cafe.naver.com/alkaonline">Alkaonline project<br>2017.02.02 ~ 2019.02.06</a></h3>
+                <iframe width="280" height="158" src="https://www.youtube.com/embed/lHPy9eLd65s" frameborder="0"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                <p>
+                    It was a skyblock server. I developed and maintained a reward system based on contribution to the
+                    raid,
+                    a custom cooking system, a random box system, daily quests, custom item creation,
+                    and special effect plugins.
+                </p>
+            </li>
+            <li>
+                <h3><a href="https://github.com/SalkCoding/ComputerInfo">ComputerInfo</a></h3>
+                <p>
+                    This is a program that uses WMI and various APIs in C# to find out the user's hardware information.
+                    After entering high school, the program that used to show memory usage through C/C++ and Win32API
+                    was developed into a Winform by studying C#, and features were added.
+                </p>
+            </li>
+            <li>
+                <h3>This page</h3>
+                <p>
+                    These days, I'm studying Spring and HTML, CSS.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="profile_section">
+        <h2>Frequently used languages</h2>
+        <h3>Natural languages</h3>
+        <ul class="graph">
+            <li data-score="100%"><h3>Korean</h3></li>
+            <li data-score="75%"><h3>English</h3></li>
+        </ul>
+        <h3>Programming languages</h3>
+        <ul class="graph">
+            <li data-score="100%"><h3>Kotlin</h3></li>
+            <li data-score="80%"><h3>C#</h3></li>
+            <li data-score="70%"><h3>C++ (For problem solving)</h3></li>
+            <li data-score="50%"><h3>Java (For major class)</h3></li>
+            <li data-score="50%"><h3>C (For major class)</h3></li>
+        </ul>
+    </div>
+    <div class="profile_section">
+        <div class="tec_stack">
+            <h2>Technique stacks</h2>
+            <h3>I can use...</h3>
+            <p>
+                <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white"
+                     alt="">
+                <img src="https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"
+                     alt="">
+                <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
+                     alt="">
+                <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=C%2B%2B&logoColor=white"
+                     alt="">
+                <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=C&logoColor=white"
+                     alt="">
+            </p>
+            <h3>I'm studying these...</h3>
+            <p>
+                <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"
+                     alt="">
+                <img src="https://img.shields.io/badge/gradle-%2302303A.svg?style=for-the-badge&logo=gradle&logoColor=white"
+                     alt="">
+                <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white"
+                     alt="">
+            </p>
+        </div>
+        <h2>Follow me</h2>
+        <dl class="list">
+            <dt><a href="mailto:josangbeom1104@gmail.com">Email</a></dt>
+            <dd><a href="mailto:josangbeom1104@gmail.com">josangbeom1104@gmail.com</a></dd>
+
+            <dt><a href="https://github.com/SalkCoding">Github</a></dt>
+            <dd><a href="https://github.com/SalkCoding">https://github.com/SalkCoding</a></dd>
+
+            <dt><a href="https://www.acmicpc.net/user/salk1104">Baekjoon</a></dt>
+            <dd><a href="https://www.acmicpc.net/user/salk1104">https://www.acmicpc.net/user/salk1104</a></dd>
+
+            <dt><a href="https://solved.ac/profile/salk1104">Solved.ac</a></dt>
+        </dl>
+        <a href="https://solved.ac/profile/salk1104">
+            <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=salk1104"
+                 alt="">
+        </a>
+    </div>
+</div>
 </body>
 </html>

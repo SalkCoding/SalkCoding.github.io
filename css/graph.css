@@ -1,0 +1,58 @@
+.graph li {
+    background: rgb(110, 181, 255);
+    background: linear-gradient(90deg, rgba(110, 181, 255, 1) 0%, rgba(198, 31, 255, 1) 100%);
+    color: white;
+    padding: 0.5em 1em;
+    margin: 0.4em 0;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.graph li::before {
+    float: right;
+    content: attr(data-score);
+}
+
+.graph li[data-score="100%"] {
+    width: 100%;
+}
+
+.graph li[data-score="95%"] {
+    width: 90%;
+}
+
+.graph li[data-score="90%"] {
+    width: 90%;
+}
+
+.graph li[data-score="85%"] {
+    width: 80%;
+}
+
+.graph li[data-score="80%"] {
+    width: 80%;
+}
+
+.graph li[data-score="75%"] {
+    width: 75%;
+}
+
+.graph li[data-score="70%"] {
+    width: 70%;
+}
+
+.graph li[data-score="65%"] {
+    width: 80%;
+}
+
+.graph li[data-score="60%"] {
+    width: 90%;
+}
+
+.graph li[data-score="55%"] {
+    width: 80%;
+}
+
+.graph li[data-score="50%"] {
+    width: 50%;
+}
