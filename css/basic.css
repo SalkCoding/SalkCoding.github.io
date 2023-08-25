@@ -153,13 +153,17 @@ a {
 }
 
 .languages h3{
-    color: orange;
-    padding-bottom: 0.5rem;
+    padding-left: 0.7rem;
+}
+
+.languages h4{
+    padding-left: 1.5rem;
+    font-size:x-large;
 }
 
 .languages p{
-    padding-left: 0.5rem;
-    padding-bottom: 1.2rem;
+    padding-left: 2.2rem;
+    padding-bottom: 0.8rem;
 }
 
 .tec_stack h3 {
