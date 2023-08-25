@@ -1,3 +1,4 @@
+/*
 .graph li {
     background: rgb(110, 181, 255);
     background: linear-gradient(90deg, rgba(110, 181, 255, 1) 0%, rgba(198, 31, 255, 1) 100%);
@@ -92,3 +93,4 @@
 .graph li[data-score="5%"] {
     width: 5%;
 }
+*/
