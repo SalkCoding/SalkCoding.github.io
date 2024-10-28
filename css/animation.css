@@ -2,13 +2,16 @@
     0% {
         transform: translateY(0);
     }
-    33% {
-        transform: translateY(-25%);
+    25% {
+        transform: translateY(-20%);
     }
-    66% {
-        transform: translateY(-50%);
+    50% {
+        transform: translateY(-40%);
+    }
+    75% {
+        transform: translateY(-60%);
     }
     100% {
-        transform: translateY(-75%);
+        transform: translateY(-80%);
     }
 }

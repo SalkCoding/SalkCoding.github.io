@@ -110,7 +110,7 @@ a {
 
 .name_job_list {
     animation-name: rolling;
-    animation-duration: 6s;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-direction: reverse;
 }
@@ -150,16 +150,16 @@ a {
     height: 27em;
 }
 
-.languages h3{
+.skills h3{
     padding-left: 0.7rem;
 }
 
-.languages h4{
+.skills h4{
     padding-left: 1.5rem;
     font-size:x-large;
 }
 
-.languages p{
+.skills p{
     padding-left: 2.2rem;
     padding-bottom: 0.8rem;
 }
