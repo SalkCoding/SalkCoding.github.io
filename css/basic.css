@@ -110,7 +110,7 @@ a {
 
 .name_job_list {
     animation-name: rolling;
-    animation-duration: 8s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: reverse;
 }
