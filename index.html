@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
-    <!-- Page css -->
-    <link rel="stylesheet" href="css/basic.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/largeMedia.css">
-    <link rel="stylesheet" href="css/graph.css">
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -29,262 +24,724 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!-- Meta and title -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World!</title>
+
+    <title>조상범 포트폴리오 - Backend Developer</title>
 </head>
-
 <body>
-    <div class="portrait"></div>
-    <div class="profile">
-        <div class="profile_header">
-            <div class="name">
-                I'm a
-                <div class="name_job">
-                    <ul class="name_job_list">
-                        <li>Seeker</li>
-                        <li>Backend developer</li>
-                        <li>Student</li>
-                        <li>Gamer</li>
-                        <li>Seeker</li>
-                    </ul>
+    <div class="container">
+        <div class="header">
+            <h1>🖥️ Hello World!</h1>
+            <div class="subtitle">Backend Developer 조상범</div>
+            <div class="contact-info">
+                <span class="subtitle">🎂 2001.11.04</span>
+                <a href="mailto:josangbeom1104@gmail.com">✉️ josangbeom1104@gmail.com</a>
+                <a href="https://github.com/SalkCoding" target="_blank">🐱 github.com/SalkCoding</a>
+                <a href="https://solved.ac/profile/salk1104" target="_blank">🏅 solved.ac/profile/salk1104</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🙋‍♂️ About Me</h2>
+            <div class="about-content">
+                <p>안정적이고 확장 가능한 시스템을 만들어 사용자들이 언제든지 믿고 쓸 수 있도록 노력합니다.</p>
+                <p>새로운 기술 트렌드를 놓치지 않으려고 꾸준히 공부하고, 더 나은 아키텍처를 고민합니다.</p>
+                <p>복잡한 기술적 문제도 팀원들과 쉽게 소통할 수 있도록 설명하려고 노력합니다.</p>
+                <p>같이 문제를 이야기하고 해결하는 것을 좋아합니다.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📖 Education</h2>
+            <div class="edu-item">
+                <h4>가천대학교, AI소프트웨어 학과 (소프트웨어전공)</h4>
+                <p>2020.03 - 2026.02 (졸업 예정) | 학점 4.07 / 4.5</p>
+            </div>
+            <div class="edu-item">
+                <h4>고색고등학교, 이과</h4>
+                <p>2017.03 - 2020.01 (졸업)</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⛏️ Skills and Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Language</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag secondary">C/C++</span>
+                        <span class="skill-tag secondary">JavaScript</span>
+                        <span class="skill-tag secondary">Python</span>
+                    </div>
                 </div>
-                <h1 class="name_title">Sangbeom Jo!</h1>
-            </div>
-            <p>
-                Currently, I am mainly working on backend development, and I use Java and Kotlin. 
-                When I want to develop a GUI Windows program, I also develop WinForm using C#. Finally, 
-                I mainly use C++ to solve algorithm problems.
-            </p>
-            <p>
-                When developing, my main concern is how to efficiently process a lot of data. 
-                If I find a part that can be improved more efficiently, 
-                I always think about whether it can be improved through algorithms, 
-                query optimization, or CS knowledge.
-            </p>
-        </div>
-        <div class="profile_section">
-            <h2>What I did?</h2>
-            <ul class="timeline">
-                <li>
-                    <h3><a href="https://apps.apple.com/kr/app/빈틈-시간표의-빈틈을-찾아주는-플랫폼/id6740912910">Vinteum</a></h3>
-                    <img src="picture/vinteum.png" style="width: 100%;height: 75%;">
-                    <p>
-                        This application analyzes students' schedules by uploading photos of their schedules using AI, 
-                        and analyzes and provides common free timetables using a line sweeping algorithm. 
-                        This helps users create their own groups and conduct group activities at common times.
-                    </p>
-                </li>
-                <li>
-                    <h3><a href="https://play.google.com/store/apps/details?id=lab.aiia.metagachon">MetaGachon</a></h3>
-                    <img src="picture/meta_gachon_store.png" style="width: 100%;height: 75%;">
-                    <p>
-                        The reservations for classrooms provided by the software business unit located on 
-                        campus were originally written by students on paper by hand. 
-                        After discovering this, we computerized the reservations 
-                        through an app to improve the inconvenience and linked it with the school 
-                        so that the faculty could manage the students.
-                    </p>
-                </li>
-                <li>
-                    <h3><a href="https://evatuna.fish">EvaTuna project<br>2022.01 ~ 2023.11.12</a></h3>
-                    <iframe src="https://www.youtube.com/embed/2jCrlCtKQDs?wmode=opaque" 
-                        frameborder="0"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <p>
-                        I was in charge of maintaining previously developed plugins (skill system, random teleport, etc.), 
-                        and developed and maintained a custom land protection plugin. 
-                        It was a project that achieved a maximum of 100 concurrent users, 
-                        and I worked on an internal project to integrate multiple servers into a single server through the IPC API.
-                    </p>
-                </li>
-                <li>
-                    <h3><a href="https://cafe.naver.com/serverguide">EvaTuna project<br>2019.02.06 ~ 2022.01</a>
-                    </h3>
-                    <iframe src="https://www.youtube.com/embed/sxuOr-8tavE?wmode=opaque"
-                        frameborder="0"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <p>
-                        I was in charge of development and maintenance of
-                        random teleport system, skill system, custom essential plugin, daily quest,
-                        and other raid-related plugins with Minecraft server for about a year.
-                    </p>
-                </li>
-                <li>
-                    <h3><a href="https://cafe.naver.com/alkaonline">Alkaonline project<br>2017.02.02 ~
-                            2019.02.06</a></h3>
-                    <iframe src="https://www.youtube.com/embed/lHPy9eLd65s?wmode=opaque"
-                        frameborder="0"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <p>
-                        It was a skyblock server. I developed and maintained a reward system based on contribution
-                        to the
-                        raid,
-                        a custom cooking system, a random box system, daily quests, custom item creation,
-                        and special effect plugins.
-                    </p>
-                </li>
-                <li>
-                    <h3><a href="https://github.com/SalkCoding/ComputerInfo">ComputerInfo</a></h3>
-                    <img src="picture/computer_info_ram.png" style="width: 100%;height: 75%;">
-                    <p>
-                        This is a program that uses WMI and various APIs in C# to find out the user's hardware
-                        information.
-                        After entering high school, the program that used to show memory usage through C/C++ and
-                        Win32API
-                        was developed into a Winform by studying C#, and features were added.
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="profile_section">
-            <h2>Education</h2>
-            <ul class="education">
-                <li>
-                    <h3><a href="https://www.ic.ac.kr/kor/1148/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29yJTJGNDgwJTJGMTA1Njg2JTJGYXJ0Y2xWaWV3LmRvJTNG">KEA (Kakao Enterprise SW Academy) (03/04/2025 ~ 08/31/2025)</a></h3>
-                    <p style="padding-bottom: 30px">
-                        I took classes with Kakao Enterprise and corporate practical project classes. 
-                        In the classes, I configured MSA and CDC pipelines in a cloud native environment using Kakao Cloud with my team members, 
-                        and implemented CQRS using various DBs such as MongoDB and Elasticsearch. In addition, 
-                        I also performed monitoring using Prometheus and Grafana.
-                    </p>
-                </li>
-                <li>
-                    <h3><a href="https://www.gachon.ac.kr">Gachon unviersity (2020 ~ Present)</a></h3>
-                    <p style="padding-bottom: 30px">
-                        I am currently in my third year of university, and my major is Computer Science.
-                        The overall GPA is 4.05 and the major course GPA is 4.02 without retakes.
-                    </p>
-                </li>
-                <li>
-                    <h3>Gosaek highschool (2017 ~ 2020)</h3>
-                    <p style="padding-bottom: 30px;">
-                        Among liberal arts and sciences, I chose science and studied physics, life sciences, and earth sciences.
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="profile_section">
-            <h2>Language skills</h2>
-            <div class="languages">
-                <h3>Natural languages</h3>
-                <h4>Korean</h4>
-                <p>
-                    I am a native Korean speaker.
-                </p>
-            
-                <h4>English</h4>
-                <p>
-                    I can read technical documents and texts in intermediate English, 
-                    and I can have a little conversation. But not fluent as much as native...
-                </p>
-
-                <br>
-                <h4>Language Certifications</h4>
-                <p>
-                    <a href="">TOEIC 835 [LC(465) RC(370)], 03/09/25</a>
-                </p>
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Spring Data JPA</span>
+                        <span class="skill-tag secondary">Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Database</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag secondary">MongoDB</span>
+                        <span class="skill-tag secondary">ElasticSearch</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>DevOps</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Grafana</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">KakaoCloud</span>
+                        <span class="skill-tag secondary">AWS</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="profile_section">
-            <div class="tec_stack">
-                <h2>Technique stacks</h2>
-                <h3>I'd experienced these</h3>
-                <p>
 
-                    <!-- Computer languages -->
+        <div class="section">
+            <h2 class="section-title">📝 Projects (클릭하여 상세보기)</h2>
 
-                    <img src="https://img.shields.io/badge/c-00599C.svg?style=for-the-badge&logo=C&logoColor=white"
-                        alt="C">
-                    <img src="https://img.shields.io/badge/C++-00599C.svg?style=for-the-badge&logo=C%2B%2B&logoColor=white"
-                        alt="C++">
-                    <img src="https://img.shields.io/badge/C%23-239120.svg?style=for-the-badge&logo=&logoColor=white"
-                        alt="C#">
-
-                    <img src="https://img.shields.io/badge/java-ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
-                        alt="Java">
-                    <img src="https://img.shields.io/badge/kotlin-7F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white"
-                        alt="Kotlin">
-                    
-                    <br>
-
-                    <!-- Technique stacks -->
-
-                    <img src="https://img.shields.io/badge/spring-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"
-                        alt="Spring">  
-                    <img src="https://img.shields.io/badge/spring%20jpa-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"
-                        alt="Spring JPA">
-                    <img src="https://img.shields.io/badge/spring%20boot-6DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white"
-                        alt="Spring Boot">
-                    
-                    <br>
-
-                    <!-- Datasources -->
-
-                    <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
-                        alt="MySQL">
-                    <img src="https://img.shields.io/badge/redis-FF4438?style=for-the-badge&logo=redis&logoColor=white"
-                        alt="Redis">
-
-                    <!-- <br> -->
-
-                    <!-- DevOps -->
-
-                    <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white"
-                        alt="Gradle">
-                    <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
-                        alt="Docker">
-
-                    <br>
-
-                    <!-- Dev tools -->
-                    <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"
-                        alt="Git">
-                    <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"
-                        alt="Docker">
-                    <img src="https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white"
-                        alt="Notion">
-                </p>
-
-                <h3>Now I'm studying these...</h3>
-                <p>
-                    <img src="https://img.shields.io/badge/kubernetes-326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white"
-                        alt="kubernetes">
-                    <img src="https://img.shields.io/badge/github%20actions-2671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white"
-                        alt="Github Actions">
-                    <img src="https://img.shields.io/badge/aws-232F3E.svg?style=for-the-badge&logo=amazonwebservices&logoColor=white"
-                        alt="Amazon Web Services">
-                </p>
-
+            <!-- Flow -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/pCAGPDv.png" 
+                                 alt="Flow Thumbn" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">🌊 Flow</div>
+                                    <div class="project-period">2025.06 - 2025.08 | 팀 구성: 11명 (백엔드 팀장)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Spring Boot</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">RabbitMQ</span>
+                                <span class="project-tag">Weviate</span>
+                                <span class="project-tag">KakaoCloud</span>
+                            </div>
+                            <div class="project-summary">
+                                백엔드 팀장 | Semantic Versioning 기반 문서 버전 관리 | RabbitMQ 비동기 처리로 AI 서버 연동 | 백엔드 6명 협업 주도
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>디케이테크인에서 제시한 RAG 모델 기반 사내 AI 챗봇 플랫폼 개발</li>
+                                <li>Spring Boot + Kubernetes 기반 배포, AWS Bedrock Claude Sonnet 활용</li>
+                                <li>Github link: <a href="https://github.com/ThunderEleven-Flow">https://github.com/ThunderEleven-Flow</a></li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (백엔드 리드 개발)</h4>
+                            <ul>
+                                <li>백엔드 6명 규모 팀에서 FAQ 도메인 전체 담당 및 코드 리뷰 주도</li>
+                                <li>FAQ 시스템 구현: 카테고리 CRUD, CSV 파일 업로드, Semantic Versioning 기반 버전 관리</li>
+                                <li>부서별 권한 관리: N:M 관계 설계를 통한 카테고리-부서 접근 제어 시스템</li>
+                                <li>RabbitMQ 비동기 메시징: Spring Boot ↔ FastAPI 간 파일 처리 파이프라인 구현</li>
+                                <li>이슈 기반 개발 및 PR 코드 리뷰 프로세스 확립으로 협업 문화 정착</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>N:M 중간 테이블 중복 데이터:</strong> JPA Cascade 사용 시 Update 시점에 중복 발생 → Repository delete 후 flush()로 영속성 컨텍스트 확정 후 save 순서 제어로 데이터 정합성 확보</li>
+                                <li><strong>비동기 파일 처리 파이프라인:</strong> RabbitMQ 4개 Queue 분리 설계로 파일 업로드 → AI 파싱 → 벡터DB 저장 흐름 자동화, Processing → Active/Fail 상태 전환으로 사용자 응답 시간 단축</li>
+                                <li><strong>대규모 히스토리 조회 최적화:</strong> Offset 페이징의 성능 이슈 → QueryDSL 기반 Cursor 페이징으로 전환하여 대용량 데이터 조회 성능 개선</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과</h4>
+                            <ul>
+                                <li>백엔드 6명 대규모 협업 환경에서 FAQ 도메인 전체 개발 완료</li>
+                                <li>Semantic Versioning 기반 문서 버전 관리로 히스토리 추적성 100% 확보</li>
+                                <li>이슈 기반 개발, 짧은 PR 주기로 Conflict 최소화 및 코드 리뷰 문화 정착</li>
+                                <li>RabbitMQ 비동기 처리로 AI 서버 연동 안정성 확보 및 시스템 가용성 향상</li>
+                            </ul>
+                            <img src="https://i.imgur.com/unwug5m.png" alt="PR" class="project-detail-image" referrerpolicy="no-referrer">
+                            <img src="https://i.imgur.com/M2Y2OBj.png" alt="PR" class="project-detail-image" referrerpolicy="no-referrer">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2>Follow me</h2>
-            <dl class="list">
-                <dt><a href="https://t.me/Salk_Coding">Telegram</a></dt>
-                <dd><a href="https://t.me/Salk_Coding">@Salk_Coding</a></dd>
 
-                <dt><a href="mailto:josangbeom1104@gmail.com">Email</a></dt>
-                <dd><a href="mailto:josangbeom1104@gmail.com">josangbeom1104@gmail.com</a></dd>
+            <!-- HomeProtector -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/ejNaWUJ.png" 
+                                 alt="HomeProtector Architecture" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">🏠 HomeProtector</div>
+                                    <div class="project-period">2025.03 - 2025.06 | 팀 구성: 7명 (인프라 팀장)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Kubernetes</span>
+                                <span class="project-tag">Prometheus</span>
+                                <span class="project-tag">Grafana</span>
+                                <span class="project-tag">k6</span>
+                                <span class="project-tag">Kafka</span>
+                            </div>
+                            <div class="project-summary">
+                                인프라 팀장 | Multi-AZ Kubernetes 클러스터 구축 | k6 부하 테스트로 응답 시간 88% 단축 (4.85s→0.59s)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>청년 전세사기 방지를 위한 부동산 정보 제공 플랫폼</li>
+                                <li>Spring Boot MSA + 카카오 클라우드 기반 Kubernetes 배포</li>
+                                <li>Github link: <a href="https://github.com/orgs/Commeliers/repositories">https://github.com/Commeliers</a></li>
+                            </ul>
+                            <img src="https://i.imgur.com/2KWzFMf.png" alt="아키텍처" class="project-detail-image" referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (인프라 팀장)</h4>
+                            <ul>
+                                <li>카카오 클라우드 인프라 구성: Bastion Host, NAT Instance, 방화벽 설정</li>
+                                <li>Kubernetes Engine Multi-AZ 고가용성 클러스터 구축</li>
+                                <li>GitHub Actions CI/CD 파이프라인 자동화</li>
+                                <li>Prometheus + Grafana 실시간 메트릭 모니터링 대시보드 구축</li>
+                                <li>k6 부하 테스트 + ChaosMesh 카오스 엔지니어링 수행</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>Kubernetes 리소스 오버커밋:</strong> Pods 수 하향 조정, Resource Request 최적화로 Pod 재시작 빈도 70% 감소</li>
+                                <li><strong>백엔드 JPA N+1 문제:</strong> 백엔드 팀과 협업하여 Fetch Join 적용</li>
+                                <li><strong>Ingress-nginx 병목:</strong> Pods 수 상향 조정, HPA 자동 스케일링으로 동시 사용자 1,000명 환경 대응</li>
+                            </ul>
+                            <img src="https://i.imgur.com/weaGHgc.png" alt="모니터링" class="project-detail-image" referrerpolicy="no-referrer">
+                            <img src="https://i.imgur.com/tzkXvd5.png" alt="카오스 메쉬" class="project-detail-image" referrerpolicy="no-referrer">
+                            <img src="https://i.imgur.com/O96q3GD.png" alt="k6" class="project-detail-image" referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 최종 성과</h4>
+                            <ul>
+                                <li>최적화 전: TTFB 600ms~10s, 평균 응답 시간 4.85s</li>
+                                <li>최적화 후: TTFB 150ms 이하(75% 단축), 평균 응답 시간 0.59s(88% 개선)</li>
+                                <li>시스템 가용성 99.9% 달성 (Multi-AZ 구성)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <dt><a href="https://github.com/SalkCoding">Github</a></dt>
-                <dd><a href="https://github.com/SalkCoding">https://github.com/SalkCoding</a></dd>
+            <!-- Vinteum -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/qlt6q9r.png" 
+                                 alt="Vinteum Thumbnail" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">⌛ Vinteum</div>
+                                    <div class="project-period">2024.09 - 2025.02 | 팀 구성: 5명 → 2명 (백엔드 단독)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Spring Boot</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">Algorithm</span>
+                            </div>
+                            <div class="project-summary">
+                                백엔드 단독 개발 | 팀원 전원 이탈 위기 극복 | DB 재설계+전체 API 리팩토링 | Line Sweeping 알고리즘
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>에브리타임 시간표 OCR 인식 및 공강 시간 기반 그룹 매칭 서비스</li>
+                                <li>최초 팀 구성 5명 (백엔드 3명, 프론트 2명) → 최종 2명 (백엔드 1명, 프론트 1명)</li>
+                                <li>다운로드 링크: <a href="https://apps.apple.com/kr/app/빈틈-시간표의-빈틈을-찾아주는-플랫폼/id6740912910">https://apps.apple.com/kr/app/빈틈-시간표의-빈틈을-찾아주는-플랫폼/id6740912910</a></li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (백엔드 단독 개발)</h4>
+                            <ul>
+                                <li>프로젝트 중간 백엔드 팀원 전원 이탈(졸업, 연구실)로 단독 개발 전환</li>
+                                <li>DB 재설계: 제1,2,3 정규화 수행, User-Schedule-Group 관계 재정의</li>
+                                <li>전체 API 리팩토링: DB 변경에 따른 모든 REST API 재구현</li>
+                                <li>Line Sweeping 알고리즘 구현 (시간 복잡도: O(N×M log M), 공간 복잡도: O(N×M))</li>
+                                <li>프론트엔드 개발자와 긴밀히 협업하여 서비스 출시 완료</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>레거시 DB 문제:</strong> 제3정규화로 데이터 무결성 확보, 쿼리 성능 30% 향상</li>
+                                <li><strong>불연속 시간표 병합:</strong> Line Sweeping 알고리즘으로 연속 공강 구간 효율적 처리</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과</h4>
+                            <ul>
+                                <li>백엔드 팀원 100% 이탈 상황에서도 출시 완료 (위기 극복 능력 증명)</li>
+                                <li>DB 재설계 및 전체 API 리팩토링으로 시스템 안정성 확보</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <dt><a href="https://www.acmicpc.net/user/salk1104">Baekjoon</a></dt>
-                <dd><a href="https://www.acmicpc.net/user/salk1104">https://www.acmicpc.net/user/salk1104</a></dd>
+            <!-- MetaGachon -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/3PIpRNF.png" 
+                                 alt="MetaGachon Thumbnail" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">⏲️ MetaGachon</div>
+                                    <div class="project-period">2023.10 - 2025.01 | 팀 구성: 5명 (백엔드 3명)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Spring Security</span>
+                                <span class="project-tag">JWT</span>
+                                <span class="project-tag">Redis</span>
+                            </div>
+                            <div class="project-summary">
+                                백엔드 개발 | Spring Security+JWT 인증 | Redis SSO 구현 | 종이 예약 → 디지털 전산화
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>가천대학교 AI 인큐베이터 및 GPU 강의실 예약 시스템 전산화</li>
+                                <li>종이 기반 수작업 예약 → 앱 기반 디지털 예약으로 전환</li>
+                                <li>다운로드 링크: <a href="https://play.google.com/store/apps/details?id=lab.aiia.metagachon">https://play.google.com/store/apps/details?id=lab.aiia.metagachon</a></li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할</h4>
+                            <ul>
+                                <li>User, Reservation, Room, GPU 테이블 스키마 및 연관관계 정의</li>
+                                <li>Spring Security + JWT 기반 로그인/회원가입 로직 구현</li>
+                                <li>Redis 세션 클러스터링으로 SSO 구축 (추후 폐기)</li>
+                                <li>시간대별 예약 가능 여부 검증, 충돌 방지 로직 개발</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>세션 클러스터링 SSO:</strong> Redis + Spring Session으로 다중 서버 세션 공유 (추후 JWT로 대체)</li>
+                                <li><strong>예약 충돌 방지:</strong> DB 트랜잭션 격리 수준 조정 + 비관적 락으로 충돌 0건 달성</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과</h4>
+                            <ul>
+                                <li>종이 예약 디지털 전산화로 관리자 업무 부담 50% 감소</li>
+                                <li>Spring Security 기반 보안 체계로 인가되지 않은 접근 차단</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <dt><a href="https://solved.ac/profile/salk1104">Solved.ac</a></dt>
-            </dl>
-            <a href="https://solved.ac/profile/salk1104">
-                <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=salk1104" alt="">
-            </a>
+            <!-- EvaTuna Season 2 -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/8t86EG0.png" 
+                                 alt="EvaTuna Season 2 Thumbnail" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">☁️ EvaTuna Season 2</div>
+                                    <div class="project-period">2022.01 - 2023.11 | 팀 구성: 9명 → 5명 (플러그인 개발 2명)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">Kotlin</span>
+                                <span class="project-tag">IPC</span>
+                                <span class="project-tag">Kafka</span>
+                            </div>
+                            <div class="project-summary">
+                                플러그인 개발 | IPC 아키텍처로 TPS 46% 개선 (13→19.8) | 카페 가입자 1,587명 | 23개월 운영
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>마인크래프트 서버 플러그인 개발 및 운영</li>
+                                <li>초기 9명 → 최종 5명 (기획자 1명, 건축가 1명, 디자이너 1명, 플러그인 개발자 2명)</li>
+                                <li>카페 링크: <a href="https://cafe.naver.com/serverguide">https://cafe.naver.com/serverguide</a></li>
+                            </ul>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2jCrlCtKQDs?si=rery38k2dQw4lu7_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (플러그인 개발)</h4>
+                            <ul>
+                                <li>싱글 스레드 → IPC 멀티 프로세스 아키텍처 전환 주도</li>
+                                <li>20개 이상 플러그인을 독립 프로세스로 분리</li>
+                                <li>BungeeCord IPC 통신 API 활용 서버 간 동기화</li>
+                                <li>DB 기반 데이터 동기화 + Kafka Pub/Sub 실시간 이벤트 동기화</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>싱글 스레드 병목:</strong> IPC 아키텍처로 TPS 13 → 19.8 (46% 개선)</li>
+                                <li><strong>다중 서버 동기화:</strong> Memurai(Redis) + Kafka로 데이터 정합성 100% 보장</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과</h4>
+                            <ul>
+                                <li>최고 동시접속 100명 달성 (하드웨어 한계)</li>
+                                <li>카페 가입자 1,587명, 23개월간 안정적 운영</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EvaTuna Season 1 -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/QEd06v6.png" 
+                                 alt="EvaTuna Season 1 Thumbnail" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">☁️ EvaTuna Season 1</div>
+                                    <div class="project-period">2019.02 - 2022.01 | 팀 구성: 9명 (플러그인 개발자)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">Kotlin</span>
+                                <span class="project-tag">Spigot</span>
+                                <span class="project-tag">Paper</span>
+                            </div>
+                            <div class="project-summary">
+                                플러그인 개발 | API 마이그레이션 | Java→Kotlin 전환 | 카페 가입자 1,582명 | 3년간 운영
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>이전 스카이블럭 장르에서 독자적 장르로 전환, 팀원 재구성</li>
+                                <li>새로운 장르의 서버 구축 및 메인 시스템 개발</li>
+                                <li>카페 링크: <a href="https://cafe.naver.com/serverguide">https://cafe.naver.com/serverguide</a></li>
+                            </ul>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sxuOr-8tavE?si=VJk2SQOHcbUOcW6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (플러그인 개발)</h4>
+                            <ul>
+                                <li>게임 버전 업데이트에 따른 Deprecated API 대응 (1.16 → 1.18)</li>
+                                <li>이전 플러그인들을 상위 버전으로 마이그레이션</li>
+                                <li>랜덤 텔레포트: 다중 서버에 랜덤 좌표로 플레이어 이동 시스템</li>
+                                <li>경량화 에센셜 플러그인: 시중 필수 명령어에서 불필요한 기능 제거</li>
+                                <li>커스텀 스킬 시스템: 직업별 고유 스킬 설계 및 구현</li>
+                                <li>레이드 시스템: 이전 시즌 보스 레이드 시스템 유지보수 및 개선</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>게임 버전업 API 변경:</strong> Deprecated API를 신규 API로 전체 교체, 100% 호환성 확보</li>
+                                <li><strong>Java → Kotlin 마이그레이션:</strong> Null Safety 활용으로 코드량 30% 감소, NPE 발생률 80% 감소</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과</h4>
+                            <ul>
+                                <li>카페 가입자 1,582명: 3년간 안정적 커뮤니티 운영</li>
+                                <li>최고 동시접속 100명 달성: 서버 하드웨어 한계까지 사용자 확보</li>
+                                <li>장기 서비스 운영: 3년간 지속적인 업데이트와 유지보수로 사용자 만족도 유지</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AlkaOnline -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/7MVCG65.png" 
+                                 alt="AlkaOnline Thumbnail" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">☁️ AlkaOnline</div>
+                                    <div class="project-period">2017.02 - 2019.02 | 팀 구성: 11명 (서브 시스템 개발)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">Kotlin</span>
+                                <span class="project-tag">Spigot</span>
+                                <span class="project-tag">Paper</span>
+                            </div>
+                            <div class="project-summary">
+                                서브 시스템 개발 | 레이드 보상 시스템 | 커스텀 요리 시스템 | 카페 가입자 283명 | 최고 동시접속 50명
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>마인크래프트 스카이블럭 장르 사설 서버 개발팀 첫 합류</li>
+                                <li>게임 내 커스텀 시스템 개발 및 레거시 플러그인 유지보수</li>
+                                <li>카페 링크: <a href="https://cafe.naver.com/alkaonline">https://cafe.naver.com/alkaonline</a></li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (서브 시스템 개발)</h4>
+                            <ul>
+                                <li>보스 레이드 보상 시스템: 기여도(데미지) 기반 차등 보상 분배 알고리즘 개발</li>
+                                <li>커스텀 요리 시스템: 관리자 레시피 등록 → 유저 아이템 제작 + 버프 부여</li>
+                                <li>랜덤 박스 시스템: 특수 이펙트 적용한 확률 기반 보상 시스템</li>
+                                <li>일일 퀘스트 시스템: 플레이어 이벤트 리스너 기반 퀘스트 진행도 추적</li>
+                                <li>특수 효과 시스템: 커스텀 버프/디버프 효과 관리</li>
+                                <li>레거시 유지보수: 이탈한 개발자의 플러그인 버그 수정 및 기능 추가</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>보스 레이드 기여도 계산:</strong> HashMap으로 플레이어별 누적 데미지 실시간 추적, 기여도 비율 기반 차등 분배</li>
+                                <li><strong>레거시 코드 유지보수:</strong> 문서화 없는 코드 분석 및 역공학으로 로직 파악, 주석 추가 및 리팩토링</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과</h4>
+                            <ul>
+                                <li>카페 가입자 283명: 초기 커뮤니티 구축 성공</li>
+                                <li>최고 동시접속 50명 달성: 소규모이지만 안정적 서비스 운영</li>
+                                <li>첫 협업 경험: 개발팀 내 역할 분담 및 커뮤니케이션 학습</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ComputerInfo -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/Xr8bxpU.png" 
+                                 alt="ComputerInfo Thumbnail" 
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title">📈 ComputerInfo</div>
+                                    <div class="project-period">2017.10 ~ 2024.05 | 1인 개발 (장기 유지보수)</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">WinForm</span>
+                                <span class="project-tag">WMI</span>
+                                <span class="project-tag">OpenSource</span>
+                            </div>
+                            <div class="project-summary">
+                                오픈소스 | WMI 기반 시스템 모니터링 | GitHub Star 17개, Fork 4개 | 7년간 유지보수
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>이전 C/Win32 API 기반 PresentMemory를 C#으로 재개발</li>
+                                <li>사용자 친화적인 UI와 상세한 시스템 정보 제공</li>
+                                <li>Github link: <a href="https://github.com/SalkCoding/ComputerInfo">https://github.com/SalkCoding/ComputerInfo</a></li>
+                                <img src="https://salkcoding.github.io/picture/computer_info_ram.png" alt="모니터링" class="project-detail-image" referrerpolicy="no-referrer">
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (1인 개발)</h4>
+                            <ul>
+                                <li>WMI Query 기반 시스템 정보 수집 아키텍처 설계</li>
+                                <li>오픈소스 Form 스킨 라이브러리 활용한 직관적 UI 구현</li>
+                                <li>CPU, RAM, Storage 사용률 실시간 추적 및 그래프 시각화</li>
+                                <li>신규 기능 추가 및 코드 리팩토링 (2024년까지 지속)</li>
+                                <li>GitHub 공개 및 커뮤니티 피드백 반영</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 특징</h4>
+                            <ul>
+                                <li><strong>WMI Query 활용:</strong> CPU 모델명/코어/클록, RAM 용량/사용률, Storage 파티션 정보, OS 버전 수집</li>
+                                <li><strong>실시간 모니터링:</strong> 1초 주기로 사용률 갱신, 그래프 라이브러리로 트렌드 시각화</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과</h4>
+                            <ul>
+                                <li>GitHub Star 17개, Fork 4개: 오픈소스 커뮤니티에서 인정</li>
+                                <li>전 세계 개발자 사용: Fork를 통해 다른 개발자들이 코드 활용</li>
+                                <li>장기 유지보수: 7년간 지속적으로 개선하며 코드 품질 향상</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎒 Activities</h2>
+            <div class="activity-item">
+                <div class="activity-period">2025.09 - 현재</div>
+                <div class="activity-content">
+                    <h4>(주)한글과컴퓨터 IT인프라팀</h4>
+                    <p>근로장학생 | IT 장비 관리</p>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-period">2025.03 - 2025.09</div>
+                <div class="activity-content">
+                    <h4>Kakao Enterprise Academy 6기</h4>
+                    <p>1조 백엔드·인프라 팀장 | 현장 실습 3조 백엔드 팀장</p>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-period">2023.09 - 2025.03</div>
+                <div class="activity-content">
+                    <h4>AIIA 개발 동아리</h4>
+                    <p>교내 개발 동아리 백엔드 리더</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🏅 Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-name">정보처리기사 (진행중)</div>
+                    <div class="cert-details">필기 합격 (2025.09.10)<br>실기 응시 예정 (2025.11.08)</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">TOPCIT 수준 4</div>
+                    <div class="cert-details">정보통신기획평가원 (2025.06.23)<br>등록번호: TL2501001801</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">TOEIC 835점</div>
+                    <div class="cert-details">YBM (2025.03.09)<br>LC 465, RC 370</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 조상범 (Jo Sangbeom). All rights reserved.</p>
         </div>
     </div>
-</body>
 
+    <script>
+        function toggleProject(element) {
+            const allProjects = document.querySelectorAll('.project-item');
+            allProjects.forEach(item => {
+                if (item !== element && item.classList.contains('expanded')) {
+                    item.classList.remove('expanded');
+                }
+            });
+            element.classList.toggle('expanded');
+        }
+
+        window.addEventListener('beforeprint', () => {
+            document.querySelectorAll('.project-item').forEach(item => {
+                item.classList.add('expanded');
+            });
+        });
+    </script>
+</body>
 </html>
