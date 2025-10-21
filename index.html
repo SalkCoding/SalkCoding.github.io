@@ -170,7 +170,7 @@
                         <div class="project-section">
                             <h4>💡 기술적 도전과 해결</h4>
                             <ul>
-                                <li><strong>응답 속도 최적화:</strong> 서버 사양 문제로 MySQL, Cold data 로드 시 약 8초 소요 → Redis(RDB + AOF)로 DB 변경, Cold data 로드 시 약 4~6초로 감소</li>
+                                <li><strong>응답 속도 최적화:</strong> 서버 사양 문제로 MySQL, Cold data 로드 시 약 8초 소요 → Redis(RDB + AOF)로 DB 변경, Cold data 로드 시 약 4초대로 개선/li>
                                 <li><strong>Mixed content 에러:</strong> 프론트 https에서 백엔드 api 호출 시 Mixed content 에러 발생 → ngrok로 https 터널링하였지만 무료 플랜 고갈 이후, Certbot + Nginx 리버스 프록시 구축, https → http로 백엔드에 전달하도록 구현</li>
                                 <li><strong>CORS 에러:</strong> 프론트가 Github pages에서 구동되므로, CORS 발생 → Nginx를 통한 리버스 프록시 구축 및 CORS 헤더 처리</li>
                             </ul>
