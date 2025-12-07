@@ -108,6 +108,16 @@
                     <div class="skill-tags">
                         <span class="skill-tag">KakaoCloud</span>
                         <span class="skill-tag secondary">AWS</span>
+                        <span class="skill-tag secondary">Google Cloud Platform</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Etc</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag secondary">Apps Script</span>
+                        <span class="skill-tag secondary">Google Workspace API (GCP)</span>
+                        <span class="skill-tag secondary">Google Workspace Flows</span>
+                        <span class="skill-tag secondary">Notion</span>
                     </div>
                 </div>
             </div>
@@ -115,6 +125,78 @@
 
         <div class="section">
             <h2 class="section-title">📝 Projects (클릭하여 상세보기)</h2>
+
+            <!-- mbo-project-poc -->
+            <div class="project-item" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-thumbnail-container">
+                            <img src="https://i.imgur.com/qRxfNAo.png" 
+                                 alt="Jubilee Thumbnail"
+                                 class="project-thumbnail"
+                                 referrerpolicy="no-referrer">
+                        </div>
+                        <div class="project-info-container">
+                            <div class="project-title-row">
+                                <div>
+                                    <div class="project-title"> mbo-project-poc</div>
+                                    <div class="project-period">2025.11.11 - 진행 중 | 팀 구성: 1명</div>
+                                </div>
+                                <div class="expand-icon">▼</div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Google Cloud Platform</span>
+                                <span class="project-tag">Google Workspace API</span>
+                                <span class="project-tag">Google Workspace Flows</span>
+                                <span class="project-tag">Apps Script</span>
+                                <span class="project-tag">Gemini API</span>
+                            </div>
+                            <div class="project-summary">
+                                GCP 기반 MBO 자동화 시스템 POC 개발 | Google Workspace API 및 Flows 활용 | Gemini API 연동
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <div class="project-section">
+                            <h4>📌 프로젝트 개요</h4>
+                            <ul>
+                                <li>2025 가천대학교 시각디자인학과 제 40회 졸업전시회 공식 웹사이트 구축 (외주)</li>
+                                <li>Oracle Cloud 인스턴스를 활용하여 백엔드 및 인프라 구축</li>
+                                <li><small>하위 모든 사진의 데이터는 현재 개발 중인 사항 및 테스트 데이터이며, 사내 기밀 정보가 없음을 확인하였습니다.</small></li>
+                                <img src="https://i.imgur.com/G6zC1GK.png" alt="Workspace Flows" class="project-detail-image" referrerpolicy="no-referrer">
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🎯 담당 역할 (개발)</h4>
+                            <ul>
+                                <li>사내 GCP 환경에서 MBO 자동화 시스템 POC 개발</li>
+                                <li>Google Workspace API 및 Flows 활용</li>
+                                <li>NLP를 위해 Gemini 1.5-Flash 모델 활용</li>
+                                <li>Looker Studio 대시보드 연동</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>💡 기술적 도전과 해결</h4>
+                            <ul>
+                                <li><strong>Google Workspace API: </strong> 사내에서 실제로 사용하는 엔터프라이즈용 솔루션을 연결하여 문제를 해결</li>
+                                <li><strong>Google Workspace Flows: </strong> 새로 출시된 알파단계 기능을 활용하여 업무 프로세스 자동화</li>
+                                <li><strong>Gemini 모델 비교 및 비용 최적화: </strong> Gemini 모델(1.5-Flash, 2.0-Flash)을 비교하고, 테스트 데이터를 통해 비용 효율성을 분석하여 최적의 모델로 1.5-Flash 선택</li>
+                                <li><strong>Looker Studio 대시보드: </strong> 업무보고 데이터를 Looker Studio에 연동하여 임원진의 의사결정 지원</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🏆 결과 및 성과 (예상)</h4>
+                            <ul>
+                                <li>사내 ERP에서 수기로 팀장급이 진행하는 업무 보고를 자동화하여 효율성 향상</li>
+                                <li>Looker Studio를 활용한 데이터 시각화 및 대시보드 구축으로 의사결정 지원</li>
+                                <img src="https://i.imgur.com/S6qSVPe.png" alt="Looker Studio Dashboard" class="project-detail-image" referrerpolicy="no-referrer">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Jubilee -->
             <div class="project-item" onclick="toggleProject(this)">
@@ -779,12 +861,16 @@
             <h2 class="section-title">🏅 Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-item">
-                    <div class="cert-name">정보처리기사 (진행중)</div>
-                    <div class="cert-details">필기 합격 (2025.09.10)<br>실기 응시 및 결과 대기 (2025.11.08)</div>
+                    <div class="cert-name">정보처리기사 (결과 발표 대기)</div>
+                    <div class="cert-details">필기 합격 (2025.09.10)<br>실기 응시 및 결과 대기 (2025.11.08 - 2025.12.24)</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">SQLD (사전 점수 합격)</div>
+                    <div class="cert-details">한국데이터산업진흥원 (2025.12.12 발급 예정)<br>사전 합격 및 자격증 발급 대기 (2025.12.05)</div>
                 </div>
                 <div class="cert-item">
                     <div class="cert-name">TOPCIT 수준 4</div>
-                    <div class="cert-details">정보통신기획평가원 (2025.05.24)<br>등록번호: TL2501001801</div>
+                    <div class="cert-details">정보통신기획평가원 (2025.11.08)<br>등록번호: TL2502002353</div>
                 </div>
                 <div class="cert-item">
                     <div class="cert-name">TOEIC 835점</div>
@@ -794,7 +880,7 @@
         </div>
 
         <div class="footer">
-            <p>© 2025 조상범 (Jo Sangbeom). All rights reserved.</p>
+            <p>© 2026 조상범 (Jo Sangbeom). All rights reserved.</p>
         </div>
     </div>
 
