@@ -420,3 +420,95 @@ body {
         gap: 10px;
     }
 }
+
+/* --- 오른쪽 고정 목차 네비게이션 (TOC Style) --- */
+.header, .section, .project-item {
+    scroll-margin-top: 80px; 
+}
+
+.toc-nav {
+    position: fixed;
+    right: 40px;             /* 오른쪽 여백 */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;            /* 너비 고정 */
+    z-index: 1000;
+    
+    /* 배경 패널 스타일 (선택사항: 없애면 투명) */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    /* box-shadow: 0 4px 20px rgba(0,0,0,0.05);  <-- 배경 그림자 필요하면 주석 해제 */
+}
+
+/* "Contents" 제목 */
+.toc-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-left: 15px; /* 왼쪽 라인과 정렬 맞춤 */
+}
+
+/* 링크 공통 스타일 */
+.toc-link {
+    display: block;
+    text-decoration: none;
+    color: #7f8c8d;        /* 기본 회색 */
+    font-size: 14px;
+    padding: 6px 0 6px 15px; /* 상하 여백, 왼쪽 여백 */
+    border-left: 2px solid #eee; /* 기본 회색 라인 */
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* 메인 링크 스타일 */
+.toc-link.main-link {
+    font-weight: 600;      /* 메인은 약간 굵게 */
+    margin-top: 5px;       /* 메인 메뉴 간 간격 */
+    color: #555;
+}
+
+/* 서브 링크 (프로젝트들) 스타일 */
+.toc-link.sub-link {
+    font-size: 13px;       /* 글자 약간 작게 */
+    padding-left: 25px;    /* 들여쓰기 더 깊게 */
+    color: #999;
+}
+
+/* 서브 메뉴 그룹 컨테이너 (Projects 아래 그룹) */
+.sub-menu-group {
+    margin-bottom: 5px;
+    /* border-left: 2px solid #eee;  <-- 그룹 전체 라인이 필요하면 주석 해제 */
+}
+
+/* --- 호버(Hover) 효과 --- */
+.toc-link:hover {
+    color: #3498db;        /* 파란색 */
+    border-left-color: #3498db;
+    background: linear-gradient(90deg, rgba(52, 152, 219, 0.05), transparent); /* 살짝 배경색 */
+}
+
+/* --- 활성화(Active) 상태 --- */
+.toc-link.active {
+    color: #2c3e50;        /* 진한 곤색 */
+    font-weight: bold;
+    border-left-color: #3498db; /* 파란색 라인 강조 */
+    border-left-width: 4px;     /* 라인 더 굵게 */
+}
+
+/* 프로젝트 서브 링크 활성화 시 */
+.toc-link.sub-link.active {
+    color: #e74c3c;        /* 서브는 붉은색 포인트 */
+    border-left-color: #e74c3c;
+}
+
+/* 화면이 작으면(노트북 이하) 숨김 */
+@media (max-width: 1400px) {
+    .toc-nav {
+        display: none;
+    }
+}

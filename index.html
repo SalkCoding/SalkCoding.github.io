@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -28,8 +29,37 @@
     <title>Hello World!</title>
 </head>
 <body>
+    <nav class="toc-nav">
+        <div class="toc-title">Contents</div>
+        
+        <!-- 메인 메뉴 -->
+        <a href="#home" class="toc-link main-link">Home</a>
+        <a href="#about" class="toc-link main-link">About Me</a>
+        <a href="#education" class="toc-link main-link">Education</a>
+        <a href="#skills" class="toc-link main-link">Skills</a>
+        <a href="#projects" class="toc-link main-link">Projects</a>
+        
+        <!-- 프로젝트 서브 메뉴 (들여쓰기) -->
+        <div class="sub-menu-group">
+            <a href="#proj-mbo" class="toc-link sub-link">MBO POC</a>
+            <a href="#proj-jubilee" class="toc-link sub-link">Jubilee</a>
+            <a href="#proj-flow" class="toc-link sub-link">Flow</a>
+            <a href="#proj-homeprotector" class="toc-link sub-link">HomeProtector</a>
+            <a href="#proj-vinteum" class="toc-link sub-link">Vinteum</a>
+            <a href="#proj-metagachon" class="toc-link sub-link">MetaGachon</a>
+            <a href="#proj-evatunas2" class="toc-link sub-link">EvaTuna S2</a>
+            <a href="#proj-evatunas1" class="toc-link sub-link">EvaTuna S1</a>
+            <a href="#proj-alkaonline" class="toc-link sub-link">AlkaOnline</a>
+            <a href="#proj-computerinfo" class="toc-link sub-link">ComputerInfo</a>
+        </div>
+
+        <!-- 하단 메뉴 -->
+        <a href="#activities" class="toc-link main-link">Activities</a>
+        <a href="#certifications" class="toc-link main-link">Certifications</a>
+    </nav>
+
     <div class="container">
-        <div class="header">
+        <div class="header" id="home">
             <h1>🖥️ Hello World!</h1>
             <div class="subtitle">Backend Developer 조상범</div>
             <div class="contact-info">
@@ -40,7 +70,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="about">
             <h2 class="section-title">🙋‍♂️ About Me</h2>
             <div class="about-content">
                 <p>안정적이고 확장 가능한 시스템을 만들어 사용자들이 언제든지 믿고 쓸 수 있도록 노력합니다.</p>
@@ -50,7 +80,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="education">
             <h2 class="section-title">📖 Education</h2>
             <div class="edu-item">
                 <h4>가천대 카카오엔터프라이즈 SW아카데미 (Micro Degree)</h4>
@@ -69,7 +99,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="skills">
             <h2 class="section-title">⛏️ Skills and Tools</h2>
             <div class="skills-grid">
                 <div class="skill-category">
@@ -130,11 +160,11 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="projects">
             <h2 class="section-title">📝 Projects (클릭하여 상세보기)</h2>
 
             <!-- mbo-project-poc -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-mbo" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -206,7 +236,7 @@
             </div>
 
             <!-- Jubilee -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-jubilee" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -276,7 +306,7 @@
             </div>
 
             <!-- Flow -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-flow" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -351,7 +381,7 @@
             </div>
 
             <!-- HomeProtector -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-homeprotector" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -427,7 +457,7 @@
             </div>
 
             <!-- Vinteum -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-vinteum" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -494,7 +524,7 @@
             </div>
 
             <!-- MetaGachon -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-metagachon" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -560,7 +590,7 @@
             </div>
 
             <!-- EvaTuna Season 2 -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-evatunas2" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -628,7 +658,7 @@
             </div>
 
             <!-- EvaTuna Season 1 -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-evatunas1" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -699,7 +729,7 @@
             </div>
 
             <!-- AlkaOnline -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-alkaonline" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -769,7 +799,7 @@
             </div>
 
             <!-- ComputerInfo -->
-            <div class="project-item" onclick="toggleProject(this)">
+            <div class="project-item" id="proj-computerinfo" onclick="toggleProject(this)">
                 <div class="project-header">
                     <div class="project-header-content">
                         <div class="project-thumbnail-container">
@@ -839,7 +869,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="activities">
             <h2 class="section-title">🎒 Activities</h2>
             <div class="activity-item">
                 <div class="activity-period">2025.09 - 현재</div>
@@ -864,7 +894,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="certifications">
             <h2 class="section-title">🏅 Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-item">
@@ -909,23 +939,5 @@
             <p>© 2026 조상범 (Jo Sangbeom). All rights reserved.</p>
         </div>
     </div>
-
-    <script>
-        function toggleProject(element) {
-            const allProjects = document.querySelectorAll('.project-item');
-            allProjects.forEach(item => {
-                if (item !== element && item.classList.contains('expanded')) {
-                    item.classList.remove('expanded');
-                }
-            });
-            element.classList.toggle('expanded');
-        }
-
-        window.addEventListener('beforeprint', () => {
-            document.querySelectorAll('.project-item').forEach(item => {
-                item.classList.add('expanded');
-            });
-        });
-    </script>
 </body>
 </html>
