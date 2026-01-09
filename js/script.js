@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // (5) 이동 실행 (delay 후 실행)
                 setTimeout(() => {
-                    // 중요: 정확한 좌표 재계산 (브라우저 버그 방지용 수동 계산)
+                    // 정확한 좌표 재계산 (브라우저 버그 방지용 수동 계산)
                     const headerOffset = 80; // 상단 여백
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -86,13 +86,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function toggleProject(element) {
+    // 1. 모든 프로젝트 요소를 가져옵니다.
     const allProjects = document.querySelectorAll('.project-item');
+    
+    // 2. 다른 프로젝트가 열려있다면 닫습니다.
     allProjects.forEach(item => {
         if (item !== element && item.classList.contains('expanded')) {
             item.classList.remove('expanded');
         }
     });
+
+    // 3. 클릭한 프로젝트를 토글(열기/닫기)합니다.
     element.classList.toggle('expanded');
+
+    // 4. 프로젝트가 열리는 경우(expanded 클래스가 추가된 경우) 스크롤 이동 로직을 실행합니다.
+    if (element.classList.contains('expanded')) {
+        // CSS transition(0.5초)이 끝난 뒤 위치를 계산해야 정확합니다.
+        setTimeout(() => {
+            const headerOffset = 80; // 상단 헤더가 가리지 않도록 여백 설정 (기존 코드와 동일)
+            
+            // 현재 요소의 화면상 위치 계산
+            const elementPosition = element.getBoundingClientRect().top;
+            
+            // 절대적인 문서 전체 위치 계산 (현재 스크롤 위치 + 요소 위치 - 헤더 여백)
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            // 부드럽게 해당 위치로 스크롤 이동
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }, 500); // style.css의 transition: 0.5s 와 시간을 맞춥니다.
+    }
 }
 
 window.addEventListener('beforeprint', () => {
