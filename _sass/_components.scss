@@ -18,8 +18,8 @@
 }
 .company-logo {
     flex-shrink: 0;
-    width: 64px;
-    height: 64px;
+    width: 96px;
+    height: 96px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,8 +34,6 @@
     height: 100%;
     object-fit: contain;
 }
-/* 가로로 긴 로고 예외 처리 */
-.company-logo.wide { width: 110px; padding: 12px; }
 
 /* 확장 아이콘 (화살표) */
 .expand-icon {

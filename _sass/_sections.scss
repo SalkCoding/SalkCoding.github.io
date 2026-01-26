@@ -130,6 +130,65 @@
 .job-info h4 { font-size: 1.15rem; margin-bottom: 4px; margin-top: 0; font-weight: 700; }
 .job-info p { font-size: 0.95rem; color: #666; margin: 0; }
 
+/* 타이틀과 간격 조정 */
+.job-title {
+    margin-bottom: 4px; /* 제목 밑 간격 좁힘 */
+    font-size: 1.15rem;
+}
+
+/* 날짜 및 배지 행 */
+.job-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 날짜와 배지 사이 간격 */
+    margin-bottom: 6px;
+}
+
+.job-period {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    font-weight: 500; /* 숫자 가독성 위해 살짝 두껍게 */
+}
+
+/* 상태 배지 (수료, 졸업예정 등) */
+.status-badge {
+    background: none;
+    color: #868e96;                /* 흐릿한 회색 */
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0;
+    position: relative;
+    padding-left: 12px;
+}
+
+/* 앞에 작은 점 추가 */
+.status-badge::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #ced4da;     /* 점 색상 */
+    border-radius: 50%;
+}
+
+/* 학위/과정명 */
+.job-degree {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+/* 상세 내용 (글씨 조금 작게) */
+.job-details {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
 /* --- Activities & Certifications --- */
 .activity-item {
     display: flex;
