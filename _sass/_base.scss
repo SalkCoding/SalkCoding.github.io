@@ -1,0 +1,20 @@
+/* 전체 리셋 및 폰트 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+/* 링크 기본 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,75 @@
+/* 메인 컨테이너 */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* TOC 위치 기준 */
+}
+
+/* 헤더 영역 */
+.header {
+    text-align: center;
+    border-bottom: 3px solid #2c3e50;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.header .subtitle {
+    font-size: 18px;
+    color: #53595a;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.contact-info a {
+    color: #3498db;
+    font-size: 14px;
+}
+.contact-info a:hover { text-decoration: underline; }
+
+/* 섹션 공통 */
+.section { margin-bottom: 40px; scroll-margin-top: 20px; }
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 24px;
+    background: #3498db;
+}
+
+/* 푸터 */
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    color: #7f8c8d;
+    font-size: 14px;
+}

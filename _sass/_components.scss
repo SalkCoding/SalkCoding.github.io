@@ -1,0 +1,47 @@
+/* 스킬/프로젝트 태그 */
+.skill-tag, .project-tag {
+    background: #3498db;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: inline-block;
+}
+.skill-tag.secondary { background: #95a5a6; }
+.project-tag { background: #ecf0f1; color: #2c3e50; padding: 4px 10px; }
+
+/* 로고 박스 (Job Item) */
+.job-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.company-logo {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* 가로로 긴 로고 예외 처리 */
+.company-logo.wide { width: 110px; padding: 12px; }
+
+/* 확장 아이콘 (화살표) */
+.expand-icon {
+    color: #3498db;
+    font-size: 20px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+.project-item.expanded .expand-icon { transform: rotate(180deg); }

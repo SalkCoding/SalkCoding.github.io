@@ -1,0 +1,21 @@
+# Jekyll 빌드 결과물 (GitHub Pages가 알아서 빌드하므로 올릴 필요 없음)
+_site/
+
+# Jekyll 캐시 및 메타데이터
+.jekyll-cache/
+.jekyll-metadata
+
+# Sass 캐시
+.sass-cache/
+
+# Mac 시스템 파일 (지긋지긋한 .DS_Store)
+.DS_Store
+*/.DS_Store
+
+# Ruby 의존성 패키지 (로컬 설치 시)
+vendor/
+.bundle/
+
+# 에디터 설정 파일 (VS Code 등)
+.vscode/
+.idea/
