@@ -2,9 +2,9 @@
 ---
 
 /* SCSS 파일 임포트 */
-@forward "base";
-@forward "nav";
-@forward "layout";
-@forward "components";
-@forward "sections";
-@forward "responsive";
+@import "base";
+@import "nav";
+@import "layout";
+@import "components";
+@import "sections";
+@import "responsive";
