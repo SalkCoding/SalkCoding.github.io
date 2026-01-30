@@ -13,11 +13,12 @@
 /* 로고 박스 (Job Item) */
 .job-item {
     display: flex;
-    align-items: center;
+    // align-items: center;
     gap: 20px;
 }
 .company-logo {
     flex-shrink: 0;
+    margin-top: 5px;
     width: 96px;
     height: 96px;
     display: flex;
