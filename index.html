@@ -1,13 +1,840 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jo Sangbeom — Backend Developer</title>
+  <meta name="description" content="조상범(Jo Sangbeom) — Backend Developer. 안정적인 시스템을 만들고, 팀과 함께 문제를 풀어가는 개발자." />
+  <meta name="author" content="Jo Sangbeom" />
+  <meta property="og:title" content="Jo Sangbeom — Backend Developer" />
+  <meta property="og:description" content="안정적이고 확장 가능한 시스템을 설계·구현하는 백엔드 개발자 포트폴리오" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://salkcoding.github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Jo Sangbeom — Backend Developer" />
+  <meta name="twitter:description" content="안정적인 시스템을 설계·구현하는 백엔드 개발자 포트폴리오" />
 
-{% include header.html %}
-{% include about.html %}
-{% include workexperience.html %}
-{% include education.html %}
-{% include skills.html %}
-{% include projects.html %}
-{% include activities.html %}
-{% include certifications.html %}
-{% include footer.html %}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/portfolio.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  <meta name="theme-color" content="#f4f3ef" />
+</head>
+<body>
+
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#home" data-i18n="ui.skip">Skip to content</a>
+
+  <!-- ── FIXED UI ──────────────────────────────────────── -->
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-nav" id="site-nav">
+    <a class="nav-brand" href="#home" data-i18n-aria="ui.nav.home">
+      <span class="nav-brand-mark">JS</span>
+      <span class="nav-brand-text">JO SANGBEOM</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" data-i18n-aria="ui.nav.menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu" id="nav-menu" data-i18n-aria="ui.nav.primary">
+      <a class="nav-link" href="#about" data-section="about" data-i18n="ui.nav.about">About</a>
+      <a class="nav-link" href="#work" data-section="work" data-i18n="ui.nav.work">Work</a>
+      <a class="nav-link" href="#projects" data-section="projects" data-i18n="ui.nav.projects">Projects</a>
+      <a class="nav-link" href="#skills" data-section="skills" data-i18n="ui.nav.skills">Skills</a>
+      <a class="nav-link" href="#contact" data-section="contact" data-i18n="ui.nav.contact">Contact</a>
+    </nav>
+
+    <div class="lang-toggle" role="group" data-i18n-aria="ui.lang.label">
+      <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">KO</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <button class="theme-toggle" id="theme-toggle" data-i18n-aria="ui.theme.dark">[ DARK ]</button>
+  </header>
+
+  <nav class="kbd-hints" aria-label="Keyboard shortcuts">
+    <div class="row"><kbd>^H</kbd> <span data-i18n="ui.kbd.home">Home</span></div>
+    <div class="row"><kbd>^A</kbd> <span data-i18n="ui.kbd.about">About</span></div>
+    <div class="row"><kbd>^W</kbd> <span data-i18n="ui.kbd.work">Work</span></div>
+    <div class="row"><kbd>^P</kbd> <span data-i18n="ui.kbd.projects">Projects</span></div>
+    <div class="row"><kbd>^E</kbd> <span data-i18n="ui.kbd.education">Education</span></div>
+    <div class="row"><kbd>^S</kbd> <span data-i18n="ui.kbd.skills">Skills</span></div>
+    <div class="row"><kbd>^C</kbd> <span data-i18n="ui.kbd.contact">Contact</span></div>
+    <div class="row"><kbd>^I</kbd> <span data-i18n="ui.kbd.invert">Invert</span></div>
+    <div class="row"><kbd>^↑↓</kbd> <span data-i18n="ui.kbd.scroll">Scroll</span></div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────── -->
+
+  <section id="home" class="hero-section" aria-label="Hero">
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-glow" id="hero-glow" aria-hidden="true"></div>
+    <div class="hero">
+      <p class="hero-in hero-role" data-i18n="hero.role">Backend Developer</p>
+      <h1 class="hero-in hero-name">JO <em>SANGBEOM</em></h1>
+      <p class="hero-in hero-desc" data-i18n-html="hero.desc">사람이 믿고 쓸 수 있는 시스템을 만듭니다.<br>문제를 함께 풀어내는 과정을 좋아합니다.</p>
+      <p class="hero-in hero-work" data-i18n="hero.work">(주)안랩 · EDR개발팀</p>
+      <div class="hero-in hero-meta">
+        <a href="mailto:josangbeom1104@gmail.com">josangbeom1104@gmail.com</a>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href="https://github.com/SalkCoding" target="_blank" rel="noopener">GitHub</a>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href="https://solved.ac/profile/salk1104" target="_blank" rel="noopener">solved.ac</a>
+      </div>
+      <div class="hero-in hero-links">
+        <a class="link-slide" href="#projects" data-i18n="hero.link.projects">Projects</a>
+        <a class="link-slide" href="#contact" data-i18n="hero.link.contact">Contact</a>
+      </div>
+    </div>
+    <a href="#featured" class="scroll-cue" aria-label="Scroll down">
+      <span class="scroll-cue-line"></span>
+    </a>
+  </section>
+
+  <!-- ── FEATURED ──────────────────────────────────────── -->
+
+  <section id="featured" aria-labelledby="featured-title" class="featured-section">
+    <div class="section">
+      <h2 class="sec-title sec-title--sm reveal" id="featured-title">
+        <span class="sec-index">01</span> <span data-i18n="section.featured">FEATURED</span>
+      </h2>
+      <div class="featured-grid reveal stagger-group">
+
+        <a class="featured-card" href="#proj-homeprotector">
+          <div class="featured-card-top">
+            <span class="featured-tag" data-i18n="featured.hp.tag">Infra Lead</span>
+            <span class="featured-year">2025</span>
+          </div>
+          <h3 class="featured-name">HomeProtector</h3>
+          <p class="featured-desc" data-i18n="featured.hp.desc">청년 전세사기 방지 플랫폼 — 인프라 리드, 응답시간 88% 개선</p>
+          <span class="featured-arrow">→</span>
+        </a>
+
+        <a class="featured-card" href="#proj-flow">
+          <div class="featured-card-top">
+            <span class="featured-tag" data-i18n="featured.flow.tag">Backend Lead</span>
+            <span class="featured-year">2025</span>
+          </div>
+          <h3 class="featured-name">Flow</h3>
+          <p class="featured-desc" data-i18n="featured.flow.desc">사내 AI 챗봇 플랫폼 — 6명 팀 백엔드 리드, FAQ 도메인 전담</p>
+          <span class="featured-arrow">→</span>
+        </a>
+
+        <a class="featured-card" href="#proj-oswl">
+          <div class="featured-card-top">
+            <span class="featured-tag" data-i18n="featured.oswl.tag">Open Source</span>
+            <span class="featured-year">2026</span>
+          </div>
+          <h3 class="featured-name">OsWL</h3>
+          <p class="featured-desc" data-i18n="featured.oswl.desc">셀프호스팅 SCA 플랫폼 — CVE·라이선스 리스크 추적, v1.0.0 출시</p>
+          <span class="featured-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── ABOUT ─────────────────────────────────────────── -->
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="section reveal">
+      <h2 class="sec-title" id="about-title"><span class="sec-index">02</span> <span data-i18n="section.about">ABOUT</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p><span class="prompt">/</span><span data-i18n="about.p1">안정적이고 확장 가능한 시스템을 만들어, 사용자가 언제든지 믿고 쓸 수 있도록 노력합니다.</span></p>
+          <p><span class="prompt">/</span><span data-i18n="about.p2">새로운 기술을 꾸준히 공부하고, 더 나은 아키텍처를 끊임없이 고민합니다.</span></p>
+          <p><span class="prompt">/</span><span data-i18n="about.p3">복잡한 기술적 문제도 팀원들이 이해하기 쉽게 설명하려고 노력합니다.</span></p>
+          <p><span class="prompt">/</span><span data-i18n="about.p4">같이 문제를 이야기하고 해결하는 것을 좋아합니다.</span></p>
+        </div>
+        <div class="about-links">
+          <a class="about-link" href="mailto:josangbeom1104@gmail.com">[/> josangbeom1104@gmail.com →</a>
+          <a class="about-link" href="https://github.com/SalkCoding" target="_blank" rel="noopener">[/> github.com/SalkCoding →</a>
+          <a class="about-link" href="https://solved.ac/profile/salk1104" target="_blank" rel="noopener">[/> solved.ac/profile/salk1104 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── WORK EXPERIENCE ───────────────────────────────── -->
+
+  <section id="work" aria-labelledby="work-title">
+    <div class="section reveal">
+      <h2 class="sec-title" id="work-title"><span class="sec-index">03</span> <span data-i18n="section.work">WORK</span></h2>
+      <div class="work-list">
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="work-period" data-i18n="work.w1.period">2026.02.02 — 재직중</span>
+            <span class="work-badge" data-i18n="work.w1.badge">EDR개발팀</span>
+          </div>
+          <div>
+            <h3 class="work-company" data-i18n="work.w1.company">(주) 안랩</h3>
+            <p class="work-role" data-i18n="work.w1.role">[/> 25년 하반기 공채 — 웹개발자</p>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="work-period" data-i18n="work.w2.period">2025.09.01 — 2026.02.01</span>
+            <span class="work-badge" data-i18n="work.w2.badge">IT인프라팀</span>
+          </div>
+          <div>
+            <h3 class="work-company" data-i18n="work.w2.company">(주) 한글과컴퓨터</h3>
+            <p class="work-role" data-i18n="work.w2.role">[/> 25년도 2학기 근로장학생</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── PROJECTS ───────────────────────────────────────── -->
+
+  <section id="projects" aria-labelledby="proj-title">
+    <div class="section">
+      <h2 class="sec-title reveal" id="proj-title"><span class="sec-index">04</span> <span data-i18n="section.projects">PROJECTS</span></h2>
+      <div class="project-list">
+
+        <!-- ① OsWL -->
+        <div class="proj-item" id="proj-oswl">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">OsWL</span></div>
+              <p class="proj-summary" data-i18n="proj.oswl.summary">셀프호스팅 SCA 플랫폼 — CVE·라이선스 리스크 추적 | OSV·deps.dev 연동 | v1.0.0 출시</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2026.04 — 2026.06</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Spring Boot</span><span class="tag">Java</span><span class="tag">PostgreSQL</span><span class="tag">Tailwind CSS</span><span class="tag">Docker</span><span class="tag">OSV API</span><span class="tag">Open Source</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/oswl/security-center.png" alt="OsWL Security Center" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.oswl.ov1">OsWL(Open-source Software Watchlist) — OSS 의존성의 CVE 취약점과 라이선스 리스크를 추적·관리하는 셀프호스팅 SCA 플랫폼</li>
+                <li data-i18n-html="proj.oswl.ov2"><a href="https://github.com/SalkCoding/Oswl" target="_blank" rel="noopener">github.com/SalkCoding/Oswl</a> / <a href="https://salkcoding.github.io/Oswl/" target="_blank" rel="noopener">salkcoding.github.io/Oswl</a></li>
+              </ul>
+              <img src="./assets/images/oswl/projects.png" alt="OsWL Projects Dashboard" />
+              <img src="./assets/images/oswl/license.png" alt="OsWL License Analysis" />
+              <img src="./assets/images/oswl/risk-trend.png" alt="OsWL Risk Trend" /></div>
+              <div class="proj-sec"><h4 data-i18n="proj.oswl.roleTitle">Role — Lead · Maintainer</h4><ul>
+                <li data-i18n="proj.oswl.role1">프로젝트 리드 및 메인테이너 — 아키텍처 설계, 백엔드·보안·API 전반 개발</li>
+                <li data-i18n="proj.oswl.role2">Security Center, License Analysis, Risk Trend, Version Diff 등 핵심 도메인 구현</li>
+                <li data-i18n="proj.oswl.role3">Quick Import(GitHub/GitLab/Bitbucket) 및 CLI 스캔 REST API 설계</li>
+                <li data-i18n="proj.oswl.role4">RBAC, 감사 로그, 2FA·신뢰 기기 등 엔터프라이즈 보안 기능 구현</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.oswl.ch1"><strong>외부 API 연동</strong> — OSV querybatch·deps.dev로 CVE·라이선스 메타데이터 보강</li>
+                <li data-i18n-html="proj.oswl.ch2"><strong>Quick Import 파이프라인</strong> — VCS 클론·의존성 파싱·비동기 잡 큐 및 SSE 진행률 스트리밍</li>
+                <li data-i18n-html="proj.oswl.ch3"><strong>멀티테넌트 권한</strong> — 역할 템플릿과 프로젝트 멤버십 이중 레이어 RBAC 설계</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.oswl.res1">v1.0.0 정식 릴리스 (MIT) — 보안 센터·라이선스 분석·AI 인사이트 등 전 기능 포함</li>
+                <li data-i18n="proj.oswl.res2">170+ 커밋, 한·영 문서 및 GitHub Wiki 자동 동기화 체계 구축</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ② mbo-project-poc -->
+        <div class="proj-item" id="proj-mbo">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">mbo-project-poc</span></div>
+              <p class="proj-summary" data-i18n="proj.mbo.summary">GCP 기반 MBO 자동화 시스템 POC — Gemini API 연동 AI 에이전트</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2025.11 — 2026.01</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">GCP</span><span class="tag">Google Workspace API</span><span class="tag">Google Workspace Flows</span><span class="tag">Apps Script</span><span class="tag">Gemini API</span><span class="tag">Looker Studio</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/mbo-project-poc/thumbnail.png" alt="mbo-project-poc" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.mbo.ov1">(주)한글과컴퓨터 근로장학생 근무 중 프로젝트</li>
+                <li data-i18n="proj.mbo.ov2">GCP 기반 사내 업무보고용 AI 에이전트 개발</li>
+              </ul>
+              <img src="./assets/images/mbo-project-poc/architecture.png" alt="Architecture" />
+              <img src="./assets/images/mbo-project-poc/google-chat-result.png" alt="Google Chat result" />
+              <img src="./assets/images/mbo-project-poc/workspace-flows-result.png" alt="Workspace Flows result" /></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.role">Role</h4><ul>
+                <li data-i18n="proj.mbo.role1">사내 GCP 환경에서 MBO 자동화 시스템 POC 개발</li>
+                <li data-i18n="proj.mbo.role2">Google Workspace API 및 Flows 활용</li>
+                <li data-i18n="proj.mbo.role3">Gemini 2.5-Flash 모델과 Few-shot 프롬프팅 활용</li>
+                <li data-i18n="proj.mbo.role4">Looker Studio 대시보드 연동</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.mbo.ch1"><strong>Google Workspace API</strong> — 사내 엔터프라이즈 솔루션 연결</li>
+                <li data-i18n-html="proj.mbo.ch2"><strong>Google Workspace Flows</strong> — 알파단계 기능으로 업무 프로세스 자동화</li>
+                <li data-i18n-html="proj.mbo.ch3"><strong>Vertex AI 배치 처리</strong> — Apps Script Trigger로 요청 배치 처리 구현</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.mbo.res1">수기 업무 보고를 자동화하여 효율성 향상</li>
+                <li data-i18n="proj.mbo.res2">Looker Studio 대시보드로 의사결정 지원</li>
+              </ul>
+              <img src="./assets/images/mbo-project-poc/looker-studio-dashboard.png" alt="Looker Studio Dashboard" /></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ② Jubilee -->
+        <div class="proj-item">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">Jubilee</span></div>
+              <p class="proj-summary" data-i18n="proj.jubilee.summary">가천대학교 시각디자인학과 제40회 졸업전시회 공식 웹사이트 — 백엔드·인프라</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2025.09 — 2025.10</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Spring Boot</span><span class="tag">Redis</span><span class="tag">Oracle Cloud</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Nginx</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/jubilee/thumbnail.jpeg" alt="Jubilee" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.jubilee.ov1">2025 가천대학교 시각디자인학과 제40회 졸업전시회 공식 웹사이트 구축 (외주)</li>
+                <li data-i18n-html="proj.jubilee.ov2"><a href="https://gcvd2025.com/" target="_blank" rel="noopener">gcvd2025.com</a> / <a href="https://github.com/GCVD2025" target="_blank" rel="noopener">github.com/GCVD2025</a></li>
+              </ul>
+              <img src="./assets/images/jubilee/project-overview.jpeg" alt="Project Overview" /></div>
+              <div class="proj-sec"><h4 data-i18n="proj.jubilee.roleTitle">Role — Backend · Infra</h4><ul>
+                <li data-i18n="proj.jubilee.role1">백엔드 방명록 Spring Boot로 구현</li>
+                <li data-i18n="proj.jubilee.role2">Oracle Cloud 인스턴스에 GitHub Actions + Docker Hub CD 파이프라인 구축</li>
+                <li data-i18n="proj.jubilee.role3">서버 사양 이슈로 DB는 Redis 채택 (RDB + AOF 영속성 보장)</li>
+                <li data-i18n="proj.jubilee.role4">도메인 구매, 프론트 도메인 연결, 서브도메인으로 백엔드 API 연결</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.jubilee.ch1"><strong>응답 속도 최적화</strong> — MySQL Cold data ~8s → Redis로 ~4s 개선</li>
+                <li data-i18n-html="proj.jubilee.ch2"><strong>Mixed content</strong> — Certbot + Nginx 리버스 프록시로 해결</li>
+                <li data-i18n-html="proj.jubilee.ch3"><strong>CORS 에러</strong> — Nginx CORS 헤더 처리</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.jubilee.res1">졸업 전시회에서 성공적으로 웹사이트 런칭</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ③ Flow -->
+        <div class="proj-item" id="proj-flow">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">Flow</span></div>
+              <p class="proj-summary" data-i18n="proj.flow.summary">RAG 기반 사내 AI 챗봇 플랫폼 — 백엔드 팀장 | RabbitMQ 비동기 처리 | 6명 협업 주도</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2025.06 — 2025.08</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">RabbitMQ</span><span class="tag">Weaviate</span><span class="tag">KakaoCloud</span><span class="tag">Kubernetes</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/flow/thumbnail.png" alt="Flow" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.flow.ov1">디케이테크인에서 제시한 RAG 모델 기반 사내 AI 챗봇 플랫폼 개발</li>
+                <li data-i18n="proj.flow.ov2">Spring Boot + Kubernetes 기반 배포, AWS Bedrock Claude Sonnet 활용</li>
+                <li data-i18n-html="proj.flow.ov3"><a href="https://github.com/ThunderEleven-Flow" target="_blank" rel="noopener">github.com/ThunderEleven-Flow</a></li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.flow.roleTitle">Role — Backend Lead</h4><ul>
+                <li data-i18n="proj.flow.role1">백엔드 6명 규모 팀에서 FAQ 도메인 전체 담당 및 코드 리뷰 주도</li>
+                <li data-i18n="proj.flow.role2">FAQ 시스템: 카테고리 CRUD, CSV 업로드, Semantic Versioning 버전 관리</li>
+                <li data-i18n="proj.flow.role3">부서별 권한 관리: N:M 관계 설계를 통한 카테고리-부서 접근 제어</li>
+                <li data-i18n="proj.flow.role4">RabbitMQ 비동기 메시징: Spring Boot ↔ FastAPI 파일 처리 파이프라인</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.flow.ch1"><strong>N:M 중복 데이터</strong> — Repository delete → flush() → save 순서 제어</li>
+                <li data-i18n-html="proj.flow.ch2"><strong>비동기 파일 처리</strong> — RabbitMQ 4개 Queue 분리로 파이프라인 자동화</li>
+                <li data-i18n-html="proj.flow.ch3"><strong>대규모 히스토리 조회</strong> — QueryDSL Cursor 페이징으로 성능 개선</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.flow.res1">FAQ 도메인 전체 개발 완료, Semantic Versioning 히스토리 추적성 확보</li>
+                <li data-i18n="proj.flow.res2">이슈 기반 개발, 짧은 PR 주기로 Conflict 최소화</li>
+              </ul>
+              <img src="./assets/images/flow/pr1.png" alt="PR" />
+              <img src="./assets/images/flow/pr2.png" alt="PR" /></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ④ HomeProtector -->
+        <div class="proj-item" id="proj-homeprotector">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">HomeProtector</span></div>
+              <p class="proj-summary" data-i18n="proj.hp.summary">청년 전세사기 방지 플랫폼 — 인프라 팀장 | Multi-AZ K8s | 응답시간 88% 단축</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2025.03 — 2025.06</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Kubernetes</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">k6</span><span class="tag">Kafka</span><span class="tag">ChaosMesh</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/homeprotector/thumbnail.png" alt="HomeProtector" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.hp.ov1">청년 전세사기 방지 부동산 정보 제공 플랫폼</li>
+                <li data-i18n="proj.hp.ov2">Spring Boot MSA + 카카오 클라우드 Kubernetes 배포</li>
+                <li data-i18n-html="proj.hp.ov3"><a href="https://github.com/orgs/Commeliers/repositories" target="_blank" rel="noopener">github.com/Commeliers</a></li>
+              </ul>
+              <img src="./assets/images/homeprotector/architecture.png" alt="Architecture" /></div>
+              <div class="proj-sec"><h4 data-i18n="proj.hp.roleTitle">Role — Infra Lead</h4><ul>
+                <li data-i18n="proj.hp.role1">카카오 클라우드 인프라: Bastion Host, NAT Instance, 방화벽 설정</li>
+                <li data-i18n="proj.hp.role2">Kubernetes Engine Multi-AZ 고가용성 클러스터 구축</li>
+                <li data-i18n="proj.hp.role3">GitHub Actions CI/CD 파이프라인 자동화</li>
+                <li data-i18n="proj.hp.role4">Prometheus + Grafana 실시간 메트릭 모니터링 대시보드</li>
+                <li data-i18n="proj.hp.role5">k6 부하 테스트 + ChaosMesh 카오스 엔지니어링</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.hp.ch1"><strong>K8s 리소스 오버커밋</strong> — Resource Request 최적화로 Pod 재시작 70% 감소</li>
+                <li data-i18n-html="proj.hp.ch2"><strong>JPA N+1 문제</strong> — Fetch Join 적용</li>
+                <li data-i18n-html="proj.hp.ch3"><strong>Ingress-nginx 병목</strong> — HPA 자동 스케일링, 동시 사용자 1,000명 대응</li>
+              </ul>
+              <img src="./assets/images/homeprotector/grafana.png" alt="Grafana" />
+              <img src="./assets/images/homeprotector/k6-before.png" alt="k6 Before" />
+              <img src="./assets/images/homeprotector/k6-after.png" alt="k6 After" /></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n-html="proj.hp.res1">평균 응답 시간 4.85s → <strong>0.59s (88% 개선)</strong></li>
+                <li data-i18n="proj.hp.res2">TTFB 75% 단축, 시스템 가용성 99.9% 달성</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ⑤ Vinteum -->
+        <div class="proj-item">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">Vinteum</span></div>
+              <p class="proj-summary" data-i18n="proj.vinteum.summary">시간표 기반 공강 매칭 서비스 — 백엔드 단독 개발 | DB 재설계 | Line Sweeping 알고리즘</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2024.09 — 2025.02</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">Algorithm</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/vinteum/thumbnail.png" alt="Vinteum" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.vinteum.ov1">에브리타임 시간표 OCR 인식 및 공강 시간 기반 그룹 매칭 서비스</li>
+                <li data-i18n="proj.vinteum.ov2">최초 팀 5명 → 최종 2명 (백엔드 1명, 프론트 1명)</li>
+                <li data-i18n-html="proj.vinteum.ov3"><a href="https://apps.apple.com/kr/app/id6740912910" target="_blank" rel="noopener">App Store 다운로드 →</a></li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.vinteum.roleTitle">Role — Solo Backend</h4><ul>
+                <li data-i18n="proj.vinteum.role1">백엔드 팀원 전원 이탈(졸업·연구실) → 단독 개발 전환</li>
+                <li data-i18n="proj.vinteum.role2">DB 재설계: 제1·2·3 정규화, User-Schedule-Group 관계 재정의</li>
+                <li data-i18n="proj.vinteum.role3">전체 API 리팩토링: DB 변경에 따른 REST API 재구현</li>
+                <li data-i18n="proj.vinteum.role4">Line Sweeping 알고리즘 구현 — O(N×M log M)</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.vinteum.ch1"><strong>레거시 DB</strong> — 제3정규화로 쿼리 성능 30% 향상</li>
+                <li data-i18n-html="proj.vinteum.ch2"><strong>불연속 시간표 병합</strong> — Line Sweeping으로 연속 공강 구간 효율적 처리</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.vinteum.res1">백엔드 100% 이탈 상황에서도 출시 완료</li>
+                <li data-i18n="proj.vinteum.res2">DB 재설계 및 전체 API 리팩토링으로 시스템 안정성 확보</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ⑥ MetaGachon -->
+        <div class="proj-item">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">MetaGachon</span></div>
+              <p class="proj-summary" data-i18n="proj.metagachon.summary">가천대학교 GPU 강의실 예약 시스템 전산화 — Spring Security + JWT + Redis SSO</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2023.10 — 2025.01</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Spring Security</span><span class="tag">JWT</span><span class="tag">Redis</span><span class="tag">Spring Boot</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/metagachon/thumbnail.png" alt="MetaGachon" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.metagachon.ov1">가천대학교 AI 인큐베이터 및 GPU 강의실 예약 시스템 전산화</li>
+                <li data-i18n="proj.metagachon.ov2">종이 기반 수작업 예약 → 앱 기반 디지털 예약으로 전환</li>
+                <li data-i18n-html="proj.metagachon.ov3"><a href="https://play.google.com/store/apps/details?id=lab.aiia.metagachon" target="_blank" rel="noopener">Play Store 다운로드 →</a></li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.role">Role</h4><ul>
+                <li data-i18n="proj.metagachon.role1">User, Reservation, Room, GPU 테이블 스키마 및 연관관계 정의</li>
+                <li data-i18n="proj.metagachon.role2">Spring Security + JWT 기반 로그인/회원가입 구현</li>
+                <li data-i18n="proj.metagachon.role3">Redis 세션 클러스터링으로 SSO 구축 (추후 JWT로 대체)</li>
+                <li data-i18n="proj.metagachon.role4">시간대별 예약 가능 여부 검증, 충돌 방지 로직 개발</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.metagachon.ch1"><strong>세션 클러스터링 SSO</strong> — Redis + Spring Session 다중 서버 세션 공유</li>
+                <li data-i18n-html="proj.metagachon.ch2"><strong>예약 충돌 방지</strong> — 비관적 락으로 충돌 0건 달성</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.metagachon.res1">종이 예약 디지털화로 관리자 업무 부담 50% 감소</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ⑦ EvaTuna Season 2 -->
+        <div class="proj-item">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">EvaTuna Season 2</span></div>
+              <p class="proj-summary" data-i18n="proj.eva2.summary">마인크래프트 서버 플러그인 — IPC 아키텍처 | TPS 46% 개선 | 카페 가입자 1,587명</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2022.01 — 2023.11</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">IPC</span><span class="tag">Kafka</span><span class="tag">BungeeCord</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/evatuna/s2/thumbnail.png" alt="EvaTuna S2" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.eva2.ov1">마인크래프트 서버 플러그인 개발 및 운영</li>
+                <li data-i18n-html="proj.eva2.ov2"><a href="https://cafe.naver.com/serverguide" target="_blank" rel="noopener">cafe.naver.com/serverguide</a></li>
+              </ul>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/2jCrlCtKQDs" title="EvaTuna S2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.role">Role</h4><ul>
+                <li data-i18n="proj.eva2.role1">싱글 스레드 → IPC 멀티 프로세스 아키텍처 전환 주도</li>
+                <li data-i18n="proj.eva2.role2">20개 이상 플러그인을 독립 프로세스로 분리</li>
+                <li data-i18n="proj.eva2.role3">BungeeCord IPC 통신 API 활용 서버 간 동기화</li>
+                <li data-i18n="proj.eva2.role4">DB 기반 데이터 동기화 + Kafka Pub/Sub 실시간 이벤트 동기화</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.eva2.ch1"><strong>싱글 스레드 병목</strong> — IPC 아키텍처로 TPS 13 → 19.8 (46% 개선)</li>
+                <li data-i18n-html="proj.eva2.ch2"><strong>다중 서버 동기화</strong> — Memurai(Redis) + Kafka 데이터 정합성 보장</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.eva2.res1">최고 동시접속 100명, 카페 가입자 1,587명, 23개월 안정적 운영</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ⑧ EvaTuna Season 1 -->
+        <div class="proj-item">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">EvaTuna Season 1</span></div>
+              <p class="proj-summary" data-i18n="proj.eva1.summary">마인크래프트 서버 플러그인 — API 마이그레이션 | Java→Kotlin | 3년 운영 | 가입자 1,582명</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2019.02 — 2022.01</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">Spigot</span><span class="tag">Paper</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/evatuna/s1/thumbnail.png" alt="EvaTuna S1" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.eva1.ov1">이전 스카이블럭 장르에서 독자적 장르로 전환</li>
+              </ul>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/sxuOr-8tavE" title="EvaTuna S1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.role">Role</h4><ul>
+                <li data-i18n="proj.eva1.role1">게임 버전 업데이트 Deprecated API 대응 (1.16 → 1.18)</li>
+                <li data-i18n="proj.eva1.role2">랜덤 텔레포트, 커스텀 스킬, 레이드 시스템 개발</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.challenges">Challenges</h4><ul>
+                <li data-i18n-html="proj.eva1.ch1"><strong>API 버전업</strong> — 전체 교체, 100% 호환성 확보</li>
+                <li data-i18n-html="proj.eva1.ch2"><strong>Java → Kotlin</strong> — 코드량 30% 감소, NPE 발생률 80% 감소</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.eva1.res1">카페 가입자 1,582명, 3년간 안정적 운영, 최고 동시접속 100명</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ⑨ AlkaOnline -->
+        <div class="proj-item">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">AlkaOnline</span></div>
+              <p class="proj-summary" data-i18n="proj.alka.summary">마인크래프트 스카이블럭 서버 — 레이드 보상 | 커스텀 요리·랜덤박스 | 첫 팀 협업</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2017.02 — 2019.02</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">Spigot</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/alkaonline/thumbnail.png" alt="AlkaOnline" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.alka.ov1">마인크래프트 스카이블럭 사설 서버 개발팀 첫 합류</li>
+                <li data-i18n-html="proj.alka.ov2"><a href="https://cafe.naver.com/alkaonline" target="_blank" rel="noopener">cafe.naver.com/alkaonline</a></li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.role">Role</h4><ul>
+                <li data-i18n="proj.alka.role1">보스 레이드 보상: 기여도(데미지) 기반 차등 보상 분배 알고리즘</li>
+                <li data-i18n="proj.alka.role2">커스텀 요리 시스템: 레시피 등록 → 아이템 제작 + 버프 부여</li>
+                <li data-i18n="proj.alka.role3">랜덤 박스: 특수 이펙트 확률 기반 보상 시스템</li>
+                <li data-i18n="proj.alka.role4">레거시 유지보수: 이탈한 개발자의 플러그인 버그 수정</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.alka.res1">카페 가입자 283명, 최고 동시접속 50명</li>
+                <li data-i18n="proj.alka.res2">첫 협업 경험: 역할 분담 및 커뮤니케이션 학습</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- ⑩ ComputerInfo -->
+        <div class="proj-item">
+          <div class="proj-hdr" role="button" tabindex="0" aria-expanded="false">
+            <div class="proj-hdr-left">
+              <div class="proj-top"><span class="proj-prompt">[/></span><span class="proj-name">ComputerInfo</span></div>
+              <p class="proj-summary" data-i18n="proj.computerinfo.summary">WMI 기반 시스템 모니터링 오픈소스 — GitHub Star 17 · Fork 4 | 7년 유지보수 | 1인 개발</p>
+            </div>
+            <div class="proj-hdr-right"><span class="proj-year">2017.10 — 2024.05</span><em class="proj-plus">⊕</em></div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">C#</span><span class="tag">WinForm</span><span class="tag">WMI</span><span class="tag">OpenSource</span>
+          </div>
+          <div class="proj-body"><div class="proj-body-inner">
+            <img src="./assets/images/computerinfo/thumbnail.png" alt="ComputerInfo" class="proj-thumb" />
+            <div class="proj-sections">
+              <div class="proj-sec"><h4 data-i18n="proj.sec.overview">Overview</h4><ul>
+                <li data-i18n="proj.computerinfo.ov1">C/Win32 API 기반 PresentMemory를 C#으로 재개발</li>
+                <li data-i18n-html="proj.computerinfo.ov2"><a href="https://github.com/SalkCoding/ComputerInfo" target="_blank" rel="noopener">github.com/SalkCoding/ComputerInfo →</a></li>
+              </ul>
+              <img src="./assets/images/computerinfo/monitoring.png" alt="Monitoring UI" /></div>
+              <div class="proj-sec"><h4 data-i18n="proj.computerinfo.roleTitle">Role — Solo</h4><ul>
+                <li data-i18n="proj.computerinfo.role1">WMI Query 기반 시스템 정보 수집 아키텍처 설계</li>
+                <li data-i18n="proj.computerinfo.role2">CPU, RAM, Storage 실시간 추적 및 그래프 시각화</li>
+                <li data-i18n="proj.computerinfo.role3">7년간 신규 기능 추가 및 코드 리팩토링</li>
+              </ul></div>
+              <div class="proj-sec"><h4 data-i18n="proj.sec.results">Results</h4><ul>
+                <li data-i18n="proj.computerinfo.res1">GitHub Star 17개, Fork 4개 — 오픈소스 커뮤니티에서 인정</li>
+                <li data-i18n="proj.computerinfo.res2">7년간 지속 유지보수로 코드 품질 향상</li>
+              </ul></div>
+            </div>
+          </div></div>
+        </div>
+
+      </div><!-- /.project-list -->
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── EDUCATION ──────────────────────────────────────── -->
+
+  <section id="education" aria-labelledby="edu-title">
+    <div class="section reveal">
+      <h2 class="sec-title" id="edu-title"><span class="sec-index">05</span> <span data-i18n="section.education">EDUCATION</span></h2>
+      <div class="edu-list">
+
+        <div class="edu-item">
+          <div class="edu-meta">
+            <span class="edu-period" data-i18n="edu.e1.period">2025.03 — 2025.09</span>
+            <span class="edu-badge" data-i18n="edu.e1.badge">수료</span>
+          </div>
+          <div>
+            <h3 class="edu-name" data-i18n="edu.e1.name">카카오엔터프라이즈 SW아카데미</h3>
+            <p class="edu-degree" data-i18n="edu.e1.degree">Micro Degree — 소프트웨어 전공인재 과정</p>
+            <p class="edu-detail" data-i18n="edu.e1.detail">데이터 관리기술 Lab · 웹 애플리케이션 개발 Lab · 시스템 아키텍처 Lab</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-meta">
+            <span class="edu-period" data-i18n="edu.e2.period">2020.03 — 2026.02</span>
+            <span class="edu-badge" data-i18n="edu.e2.badge">졸업</span>
+          </div>
+          <div>
+            <h3 class="edu-name" data-i18n="edu.e2.name">가천대학교</h3>
+            <p class="edu-degree" data-i18n="edu.e2.degree">AI·소프트웨어학과(소프트웨어전공) 공학사</p>
+            <p class="edu-detail" data-i18n="edu.e2.detail">GPA 4.07 / 4.5</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-meta">
+            <span class="edu-period" data-i18n="edu.e3.period">2017.03 — 2020.01</span>
+            <span class="edu-badge" data-i18n="edu.e3.badge">졸업</span>
+          </div>
+          <div>
+            <h3 class="edu-name" data-i18n="edu.e3.name">고색고등학교</h3>
+            <p class="edu-degree" data-i18n="edu.e3.degree">이과 계열</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── SKILLS ─────────────────────────────────────────── -->
+
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="section reveal">
+      <h2 class="sec-title" id="skills-title"><span class="sec-index">06</span> <span data-i18n="section.skills">SKILLS</span></h2>
+      <div class="skills-grid" id="skills-grid">
+
+        <div>
+          <p class="skill-cat-label" data-i18n="skills.cat.language">Language</p>
+          <div class="skill-tags">
+            <span class="sk-tag">Java</span><span class="sk-tag">Kotlin</span><span class="sk-tag">C#</span>
+            <span class="sk-tag sec">C/C++</span><span class="sk-tag sec">JavaScript</span><span class="sk-tag sec">Python</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="skill-cat-label" data-i18n="skills.cat.backend">Backend</p>
+          <div class="skill-tags">
+            <span class="sk-tag">Spring Boot</span><span class="sk-tag">Spring Data JPA</span><span class="sk-tag sec">Node.js</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="skill-cat-label" data-i18n="skills.cat.database">Database</p>
+          <div class="skill-tags">
+            <span class="sk-tag">MySQL</span><span class="sk-tag">Redis</span>
+            <span class="sk-tag sec">MongoDB</span><span class="sk-tag sec">ElasticSearch</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="skill-cat-label" data-i18n="skills.cat.devops">DevOps</p>
+          <div class="skill-tags">
+            <span class="sk-tag">Docker</span><span class="sk-tag">Kubernetes</span><span class="sk-tag">Git</span>
+            <span class="sk-tag">Prometheus</span><span class="sk-tag">Grafana</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="skill-cat-label" data-i18n="skills.cat.cloud">Cloud</p>
+          <div class="skill-tags">
+            <span class="sk-tag">KakaoCloud</span><span class="sk-tag sec">AWS</span><span class="sk-tag sec">GCP</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="skill-cat-label" data-i18n="skills.cat.etc">Etc</p>
+          <div class="skill-tags">
+            <span class="sk-tag sec">Apps Script</span><span class="sk-tag sec">Google Workspace API</span>
+            <span class="sk-tag sec">Google Workspace Flows</span><span class="sk-tag sec">Notion</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── ACTIVITIES ─────────────────────────────────────── -->
+
+  <section id="activities" aria-labelledby="act-title">
+    <div class="section reveal">
+      <h2 class="sec-title" id="act-title"><span class="sec-index">07</span> <span data-i18n="section.activities">ACTIVITIES</span></h2>
+      <div class="act-list">
+
+        <div class="act-item">
+          <span class="act-period" data-i18n="act.a1.period">2025.06 — 2025.09</span>
+          <div><p class="act-name" data-i18n="act.a1.name">(주)디케이테크인 기업실무 프로젝트</p><p class="act-role" data-i18n="act.a1.role">3조 | 백엔드 팀장</p></div>
+        </div>
+
+        <div class="act-item">
+          <span class="act-period" data-i18n="act.a2.period">2025.03 — 2025.06</span>
+          <div><p class="act-name" data-i18n="act.a2.name">카카오엔터프라이즈 SW 아카데미 6기</p><p class="act-role" data-i18n="act.a2.role">1조 | 백엔드·인프라 팀장</p></div>
+        </div>
+
+        <div class="act-item">
+          <span class="act-period" data-i18n="act.a3.period">2023.09 — 2025.03</span>
+          <div><p class="act-name" data-i18n="act.a3.name">AIIA 개발 동아리</p><p class="act-role" data-i18n="act.a3.role">교내 개발 동아리 백엔드 리더</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── CERTIFICATIONS ─────────────────────────────────── -->
+
+  <section id="certifications" aria-labelledby="cert-title">
+    <div class="section reveal">
+      <h2 class="sec-title" id="cert-title"><span class="sec-index">08</span> <span data-i18n="section.certifications">CERTIFICATIONS</span></h2>
+      <div class="cert-grid">
+
+        <div class="cert-item">
+          <p class="cert-name" data-i18n="cert.c1.name">정보처리기사</p>
+          <p class="cert-detail" data-i18n-html="cert.c1.detail">한국산업인력공단<br />응시: 2025.09.10 / 2025.11.08<br />등록번호: 25203240800H</p>
+        </div>
+
+        <div class="cert-item">
+          <p class="cert-name" data-i18n="cert.c2.name">SQLD (SQL 개발자)</p>
+          <p class="cert-detail" data-i18n-html="cert.c2.detail">한국데이터산업진흥원<br />응시: 2025.12.05<br />등록번호: SQLD-059006092</p>
+        </div>
+
+        <div class="cert-item">
+          <p class="cert-name" data-i18n="cert.c3.name">TOPCIT 수준 4</p>
+          <p class="cert-detail" data-i18n-html="cert.c3.detail">정보통신기획평가원<br />응시: 2025.11.08<br />등록번호: TL2502002353</p>
+        </div>
+
+        <div class="cert-item">
+          <p class="cert-name" data-i18n="cert.c4.name">TOEIC 835점</p>
+          <p class="cert-detail" data-i18n-html="cert.c4.detail">YBM<br />응시: 2025.03.09<br />등록번호: 148578</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── CONTACT ────────────────────────────────────────── -->
+
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section reveal">
+      <h2 class="sec-title" id="contact-title"><span class="sec-index">09</span> <span data-i18n="section.contact">CONTACT</span></h2>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:josangbeom1104@gmail.com">
+          <span class="prompt">[/></span>&nbsp;josangbeom1104@gmail.com →
+        </a>
+        <a class="contact-link" href="https://github.com/SalkCoding" target="_blank" rel="noopener">
+          <span class="prompt">[/></span>&nbsp;github.com/SalkCoding →
+        </a>
+        <a class="contact-link" href="https://solved.ac/profile/salk1104" target="_blank" rel="noopener">
+          <span class="prompt">[/></span>&nbsp;solved.ac/profile/salk1104 →
+        </a>
+      </div>
+      <div class="footer-line">
+        <span>조상범 (Jo Sangbeom) © 2026</span>
+        <span data-i18n="contact.footer.role">Backend Developer</span>
+      </div>
+    </div>
+  </section>
+
+  <button class="back-top" id="back-top" data-i18n-aria="ui.backTop">↑</button>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────── -->
+  <script src="./assets/js/translations.js"></script>
+  <script src="./assets/js/i18n.js"></script>
+  <script src="./assets/js/hero-canvas.js"></script>
+  <script src="./assets/js/portfolio.js"></script>
+
+</body>
+</html>
